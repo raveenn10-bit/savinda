@@ -2470,12 +2470,25 @@ textarea.form-input {
 
   /* Filter tabs wrap */
   .filter-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: x mandatory;
     gap: 8px;
-    padding: 6px;
+    padding: 6px 4% !important;
     border-radius: 30px;
+    justify-content: flex-start !important;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .filter-tab {
+    flex-shrink: 0 !important;
     padding: 8px 14px;
     font-size: 0.72rem;
     letter-spacing: 1px;
@@ -2493,6 +2506,28 @@ textarea.form-input {
   /* ---- PACKAGES ---- */
   .package-card {
     max-width: 100% !important;
+    flex: 0 0 310px !important;
+    min-width: 310px !important;
+    max-width: 310px !important;
+  }
+
+  .details-list li {
+    font-size: 0.95rem !important;
+    padding-left: 28px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .details-list li::before {
+    top: 4px !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .details-list li::after {
+    left: 5px !important;
+    top: 7px !important;
+    width: 4px !important;
+    height: 7px !important;
   }
 
   .package-header h3 {
@@ -2721,11 +2756,16 @@ textarea.form-input {
   .category-box,
   .destination-card,
   .photo-item,
-  .package-card,
   .country-info-card {
     flex: 0 0 230px !important;
     min-width: 230px !important;
     max-width: 230px !important;
+  }
+
+  .package-card {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
   }
 
   /* Destination cards */

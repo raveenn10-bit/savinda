@@ -333,7 +333,8 @@ function initMobileAutoScroll() {
         '.destinations-grid',
         '.photo-grid',
         '.packages-grid',
-        '.country-info-cards-wrapper'
+        '.country-info-cards-wrapper',
+        '.filter-tabs'
     ];
 
     selectors.forEach(selector => {
