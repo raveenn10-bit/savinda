@@ -1,678 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ENIX Travels</title>
-
-    <link rel="stylesheet" href="istyle.css">
+    <meta name="description" content="Explore luxury destinations, bespoke itineraries, and unforgettable adventures around the globe with ENIX Travels. Your premium travel partner.">
+    <title>ENIX Travels | Premium Travel & Luxury Journeys</title>
+    <!-- Link to premium redesign stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-
+    <!-- ==========================================
+      1. GLASSMORPHISM STICKY NAVIGATION
+    ========================================== -->
     <header class="navbar">
-
-        <a href="index.html" class="logo-section">
-
-            <img src="images/enix.jpeg" alt="Logo">
-
+        <a href="#home" class="logo-section">
+            <img src="logo.jpeg" alt="ENIX Travels Logo">
             <h2>ENIX Travels</h2>
-
         </a>
 
-        <nav>
+        <!-- CSS Checkbox Hack for Mobile Navigation -->
+        <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+        <label for="nav-checkbox" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
+        <nav class="nav-menu">
             <ul>
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="about.html">About Us</a></li>
-
-                <li><a href="destinations.html">Destinations and Gallery</a></li>
-
-                <li><a href="packages.html">Packages</a></li>
-
-                <li><a href="traveltips.html">Travel Tips</a></li>
-
-                <li><a href="contact.html">Contact Us</a></li>
-
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#packages" class="nav-link">Packages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
 
+    <!-- ==========================================
+      2. HERO SECTION (100vh)
+    ========================================== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-item hero-title">
+                The World Is Waiting,
+                <span>Let Us Take You There.</span>
+            </h1>
+            <p class="animate-item hero-sub">
+                Explore breathtaking destinations, unforgettable adventures and luxury experiences curated for the discerning traveler.
+            </p>
+            <div class="animate-item hero-cta">
+                <a href="#packages" class="glow-btn">Start Your Journey</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span>▼</span>
+        </a>
+    </section>
 
-
-
-    <section class="hero">
-
-        <div class="hero-overlay">
-
-            <h1>"The World Is Waiting,
-                 Let Us Take You There."</h1>
+    <!-- ==========================================
+      3. OUR STORY (ABOUT) SECTION
+    ========================================== -->
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Our Legacy</h3>
+                <h2>Crafting Memories Beyond Travel</h2>
+                <p>
+                    At ENIX Travels, we believe that travel is not simply a journey from one place to another; it is the art of discovering who you are when the familiar is left behind. Founded with an unwavering passion for the extraordinary, we have spent years curating travel experiences that transcend the ordinary and leave lasting impressions on every soul we guide.
+                </p>
+                <div class="about-highlight">
+                    "We are not merely a travel agency. We are architects of unforgettable moments."
+                </div>
+                <p>
+                    From the crystal lagoons of the Maldives to the illuminated streets of Paris, every destination we offer is handpicked, and every detail is meticulously arranged to deliver the extraordinary, effortlessly, every single time.
+                </p>
+                
+                <div class="about-stats">
+                    <div class="stat-item glass-panel">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Destinations</span>
+                    </div>
+                    <div class="stat-item glass-panel">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Travelers</span>
+                    </div>
+                    <div class="stat-item glass-panel">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
             
-
-            <p>
-                Explore breathtaking destinations,
-                unforgettable adventures and luxury experiences.
-            </p>
-
-            <a href="packages.html" class="hero-btn">
-                Start Your Journey
-            </a>
-
+            <div class="about-visual">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=80" alt="Planning Luxury Voyage">
+                </div>
+                <div class="visual-backdrop"></div>
+            </div>
         </div>
-
     </section>
 
-        
-
-
-    <section class="story">
-        
-        <h2>Our Story</h2>
-
-        <div class="story-content">
-
-            <p>
-                At ENIX Travels, we believe that travel is not simply a journey from one place to another, it is the art of discovering who you are when the familiar is left behind. Founded with an unwavering passion for the extraordinary, we have spent years curating travel experiences that transcend the ordinary and leave lasting impressions on every soul we guide.
-            </p>
-
-            <p>
-                We are not merely a travel agency. We are architects of unforgettable moments, crafting bespoke itineraries that weave together luxury, culture, adventure and pure relaxation - tailored precisely to the desires of every traveller who places their trust in us. From the crystal lagoons of the Maldives to the illuminated streets of Paris, every destination we offer is handpicked, every detail meticulously arranged.
-            </p>
-
-            <p>
-                When you travel with ENIX, you carry more than a suitcase, you carry the confidence of knowing that every flight, every transfer, every hotel room and every experience has been thoughtfully designed with you in mind. Our promise is simple: to deliver the extraordinary, effortlessly, every single time.
-            </p>
-
+    <!-- ==========================================
+      4. DESTINATIONS GALLERY (CSS Grid)
+    ========================================== -->
+    <section id="destinations" class="destinations">
+        <div class="section-header">
+            <h2>Breathtaking Destinations</h2>
+            <p>Immerse yourself in our collection of the world's most sought-after escapes, each offering unique stories and scenery.</p>
         </div>
 
+        <div class="destinations-grid">
+            <!-- 1. Maldives -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Tropical</span>
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives lagoon">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Maldives</h3>
+                        <p>A dream destination of coral islands scattered across the Indian Ocean. Stay in overwater villas perched above crystal turquoise water, snorkeling among vibrant reefs.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 2. Dubai -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Luxury</span>
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Burj Khalifa Dubai">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Dubai</h3>
+                        <p>Where soaring skyscrapers rise out of the desert. Glide across dunes at sunset, cruise the Marina, and experience five-star Arabian hospitality.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 3. Bali -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Wellness</span>
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali temple">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Bali</h3>
+                        <p>A tropical paradise of lush rice terraces, ancient water temples, and spiritual wellness retreats wrapped in legendary island hospitality.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 4. Thailand -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Exotic</span>
+                    <img src="https://images.unsplash.com/photo-1528181304800-2f5353a98ef3?auto=format&fit=crop&w=800&q=80" alt="Krabi beach Thailand">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Thailand</h3>
+                        <p>Striking contrasts of golden temples, floating markets, and dramatic limestone cliffs in southern islands like Phuket and Phi Phi.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 5. Switzerland -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Alpine</span>
+                    <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=80" alt="Swiss Alps Matterhorn">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Switzerland</h3>
+                        <p>Dramatic alpine peaks, pristine blue lakes, and charming villages that look as if they belong in a postcard. Pure mountain air and luxury trains.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 6. Paris -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Romance</span>
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Eiffel Tower Paris">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Paris</h3>
+                        <p>The City of Light, captivating travelers for centuries with its architecture, museums, romantic river cruises, and cozy café culture.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 7. Singapore -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Futuristic</span>
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Singapore skyline">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Singapore</h3>
+                        <p>A futuristic city-state where cutting-edge architecture meets lush garden sanctuaries and world-class culinary wonders.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- 8. Malaysia -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Heritage</span>
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=800&q=80" alt="KL Petronas towers">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Malaysia</h3>
+                        <p>A vibrant mix of modern urban skyscrapers, cool highlands, and untouched tropical islands like Langkawi.</p>
+                    </div>
+                    <a href="#packages" class="dest-link">View Packages <span>→</span></a>
+                </div>
+            </div>
+        </div>
     </section>
 
-
-
-    <section class="destinations">
-
-        <h2>Explore Our Destinations</h2>
-
-        <div class="destination-box">
-            <img src="images/Home/MALDIVES.jpeg" alt="Maldives">
-            <div>
-                <h3><a href="packages.html#maldives-block">Maldives</a></h3>
-                <p>
-                    The Maldives is a dream destination made up of more
-                    than a thousand coral islands scattered across the
-                    Indian Ocean, each one fringed by powder white sand
-                    and impossibly clear turquoise water. Travellers
-                    come here to slow down completely, staying in
-                    overwater villas perched above the lagoon and waking
-                    up to uninterrupted ocean views every morning. Days
-                    are spent snorkelling among colourful reefs, sailing
-                    out for sunset cruises, or simply relaxing by the
-                    water with nothing but the sound of waves nearby.
-                    Evenings bring quiet beachside dinners and skies
-                    full of stars far away from city lights. Whether you
-                    are planning a honeymoon, a family escape or a solo
-                    retreat, the Maldives offers a rare kind of peace
-                    that is hard to find anywhere else in the world.
-                </p>
-            </div>
+    <!-- ==========================================
+      5. FEATURED PACKAGES SECTION
+    ========================================== -->
+    <section id="packages" class="packages">
+        <div class="section-header">
+            <h2>Elite Curated Packages</h2>
+            <p>Each package is carefully engineered to deliver maximum luxury, convenience, and immersive exploration.</p>
         </div>
 
-        <div class="destination-box reverse">
-            <img src="images/Home/DUBAI.jpeg" alt="Dubai">
-            <div>
-                <h3><a href="packages.html#dubai-block">Dubai</a></h3>
-                <p>
-                    Dubai is a city built on ambition, where soaring
-                    skyscrapers rise out of the desert and tradition
-                    sits comfortably alongside modern luxury. The iconic
-                    Burj Khalifa dominates the skyline, while the
-                    bustling souks of Old Dubai offer a glimpse into the
-                    city's roots as a trading port. Visitors can glide
-                    across the dunes on a desert safari at sunset,
-                    cruise the calm waters of the Marina at night, or
-                    spend an afternoon browsing some of the world's most
-                    famous shopping malls. Dubai's hospitality is
-                    legendary, with five star hotels, fine dining and
-                    world class service at every turn. It is a
-                    destination that effortlessly blends adventure,
-                    culture and indulgence, making it equally suited to
-                    families, couples and groups of friends looking for
-                    an unforgettable getaway.
-                </p>
+        <div class="packages-grid">
+            <!-- Package 1: Maldives Honeymoon -->
+            <div class="package-card glass-panel">
+                <div class="package-header">
+                    <h3>Maldives Bliss</h3>
+                    <div class="package-duration">5 Days / 4 Nights • 5 Star</div>
+                </div>
+                <div class="package-details">
+                    <ul class="details-list">
+                        <li>Overwater Bungalow Stay</li>
+                        <li>Private Sandbank Dinner</li>
+                        <li>Dolphin Watching & Sunset Cruise</li>
+                        <li>Couples Spa & Snorkeling</li>
+                        <li>All Premium Transfers Included</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <div class="price-label">Price Per Person</div>
+                        <div class="price-amount">USD 2,050 <span>/ net</span></div>
+                        <a href="#contact" class="glow-btn package-btn">Reserve Package</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 2: Swiss Alps Adventure -->
+            <div class="package-card glass-panel">
+                <div class="package-header">
+                    <h3>Swiss Alpine</h3>
+                    <div class="package-duration">7 Days / 6 Nights • 4 Star</div>
+                </div>
+                <div class="package-details">
+                    <ul class="details-list">
+                        <li>Jungfraujoch Peak Excursion</li>
+                        <li>Scenic Lake Lucerne Cruise</li>
+                        <li>Mountain Cable Car Passes</li>
+                        <li>Guided Zurich City Tour</li>
+                        <li>First Class Swiss Rail Tickets</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <div class="price-label">Price Per Person</div>
+                        <div class="price-amount">USD 2,400 <span>/ net</span></div>
+                        <a href="#contact" class="glow-btn package-btn">Reserve Package</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3: Paris Romance -->
+            <div class="package-card glass-panel">
+                <div class="package-header">
+                    <h3>Parisian Romance</h3>
+                    <div class="package-duration">5 Days / 4 Nights • 4 Star</div>
+                </div>
+                <div class="package-details">
+                    <ul class="details-list">
+                        <li>Eiffel Tower VIP Access</li>
+                        <li>Sunset Seine River Cruise</li>
+                        <li>Private Louvre Museum Tour</li>
+                        <li>Montmartre Walking & Dining</li>
+                        <li>Luxury Airport Chauffeur</li>
+                    </ul>
+                    <div class="package-pricing">
+                        <div class="price-label">Price Per Person</div>
+                        <div class="price-amount">USD 1,800 <span>/ net</span></div>
+                        <a href="#contact" class="glow-btn package-btn">Reserve Package</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="destination-box">
-            <img src="images/Home/BALI.jpeg" alt="Bali">
-            <div>
-                <h3><a href="packages.html#bali-block">Bali</a></h3>
-                <p>
-                    Bali is a tropical paradise where lush rice terraces,
-                    ancient temples and stunning beaches exist side by
-                    side. The island has a relaxed, spiritual energy
-                    that draws travellers seeking both adventure and
-                    calm. In Ubud, you can explore terraced rice fields
-                    and visit sacred temples tucked into the jungle,
-                    while the southern coast offers world class surf
-                    breaks and beach clubs perfect for watching the
-                    sunset. Bali is also known for its wellness culture,
-                    with yoga retreats, traditional spas and healthy
-                    cuisine found throughout the island. Whether you are
-                    chasing waterfalls, hiking an active volcano at
-                    sunrise or simply unwinding by an infinity pool,
-                    Bali offers something for every type of traveller,
-                    wrapped in warm hospitality and natural beauty.
-                </p>
-            </div>
-        </div>
-
-        <div class="destination-box reverse">
-            <img src="images/Home/THAILAND.jpeg" alt="Thailand">
-            <div>
-                <h3><a href="packages.html#thailand-block">Thailand</a></h3>
-                <p>
-                    Thailand is a country of striking contrasts, where
-                    golden temples, vibrant street markets and tropical
-                    islands all form part of the same unforgettable
-                    journey. Bangkok greets visitors with ornate palaces,
-                    bustling night markets and some of the best street
-                    food in the world, while the southern islands like
-                    Phuket and Phi Phi offer dramatic limestone cliffs
-                    and crystal clear waters perfect for swimming and
-                    snorkelling. Thai culture is warm and welcoming,
-                    reflected in its food, its temples and the genuine
-                    hospitality shown to every visitor. Whether you are
-                    exploring ancient ruins, cruising between islands by
-                    longtail boat or enjoying a relaxing massage on the
-                    beach, Thailand offers an experience that is both
-                    culturally rich and effortlessly enjoyable for every
-                    kind of traveller.
-                </p>
-            </div>
-        </div>
-
-        <div class="destination-box">
-            <img src="images/Home/SWIZERLAND.jpeg" alt="Switzerland">
-            <div>
-                <h3><a href="packages.html#switzerland-block">Switzerland</a></h3>
-                <p>
-                    Switzerland is a country defined by dramatic alpine
-                    scenery, pristine lakes and charming towns that look
-                    as though they belong on a postcard. Snow capped
-                    peaks like the Matterhorn tower over green valleys,
-                    while scenic train journeys carry travellers through
-                    some of the most beautiful landscapes in Europe.
-                    Outdoor lovers can hike through alpine meadows in
-                    summer or ski down world class slopes in winter,
-                    while those seeking a slower pace can cruise across
-                    Lake Lucerne or wander through cobbled village
-                    streets. Switzerland is also known for its precision
-                    and quality, from its chocolate and watches to its
-                    famously punctual trains. It is a destination that
-                    rewards both adventure seekers and those simply
-                    looking to relax amid some of the most stunning
-                    natural scenery on earth.
-                </p>
-            </div>
-        </div>
-
-        <div class="destination-box reverse">
-            <img src="images/Home/PARIS.jpeg" alt="Paris">
-            <div>
-                <h3><a href="packages.html#paris-block">Paris</a></h3>
-                <p>
-                    Paris, the City of Light, has captured the
-                    imagination of travellers for centuries with its
-                    timeless elegance and romantic charm. The Eiffel
-                    Tower, the Louvre and Notre-Dame stand as some of the
-                    most recognisable landmarks in the world, while
-                    quiet cafes along the Seine offer the perfect place
-                    to pause and take it all in. Visitors can wander
-                    through the artistic streets of Montmartre, cruise
-                    along the river at sunset, or spend an afternoon
-                    exploring world class museums and galleries. Beyond
-                    the city, a short trip leads to the grandeur of the
-                    Palace of Versailles. Paris blends history, art,
-                    fashion and food into one unforgettable destination,
-                    perfect for couples, families and solo travellers
-                    alike who want to experience true European charm.
-                </p>
-            </div>
-        </div>
-
-        <div class="destination-box">
-            <img src="images/Home/Singapore.jpeg" alt="Singapore">
-            <div>
-                <h3><a href="packages.html#singapore-block">Singapore</a></h3>
-                <p>
-                    Singapore is a futuristic city state where
-                    cutting edge architecture, lush gardens and a rich
-                    mix of cultures come together in one of the world's
-                    most efficient and exciting destinations. Gardens by
-                    the Bay's towering Supertrees light up after dark,
-                    while Sentosa Island offers beaches, theme parks and
-                    family friendly attractions just minutes from the
-                    city centre. Foodies can explore hawker centres
-                    serving dishes from Chinese, Malay and Indian
-                    traditions, often at incredibly affordable prices.
-                    Singapore is also one of the safest and cleanest
-                    cities in the world, making it an easy destination
-                    for families travelling with children. From thrilling
-                    rides at Universal Studios to peaceful evening walks
-                    along Clarke Quay, Singapore offers something
-                    engaging for every member of the family.
-                </p>
-            </div>
-        </div>
-
-        <div class="destination-box reverse">
-            <img src="images/Home/MALAYASIA.jpeg" alt="Malaysia">
-            <div>
-                <h3><a href="packages.html#malaysia-block">Malaysia</a></h3>
-                <p>
-                    Malaysia offers a captivating mix of modern city
-                    life and untouched natural beauty, all within easy
-                    reach of one another. Kuala Lumpur's iconic Petronas
-                    Towers rise above a city filled with vibrant markets,
-                    diverse cuisine and rich cultural heritage, while
-                    the cool highlands of Genting offer a refreshing
-                    escape from the tropical heat. For those seeking
-                    sun and sea, the island of Langkawi delivers
-                    postcard perfect beaches, mangrove forests and a
-                    relaxed island pace, with a scenic cable car ride
-                    offering sweeping views over the archipelago.
-                    Malaysia's blend of cultures is reflected in its
-                    food, festivals and architecture, making it a
-                    destination where adventure, relaxation and
-                    discovery all exist comfortably side by side.
-                </p>
-            </div>
-        </div>
-
     </section>
 
+    <!-- ==========================================
+      6. CONTACT & FOOTER SECTION
+    ========================================== -->
+    <section id="contact" class="contact-wrapper">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Begin Your Narrative</h2>
+                <p>Contact our luxury travel concierges to tailor-make an itinerary matching your exact aspirations.</p>
+                
+                <div class="info-cards">
+                    <!-- Phone -->
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div class="info-details">
+                            <h4>Direct Hotline</h4>
+                            <p>+94 70 788 9923</p>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div class="info-details">
+                            <h4>Corporate Email</h4>
+                            <p>enixtravels2@gmail.com</p>
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-details">
+                            <h4>Colombo Office</h4>
+                            <p>Colombo 03, Jaya Road</p>
+                        </div>
+                    </div>
+                </div>
 
-
-
-    <section class="contact-preview">
-
-        <div class="contact-info">
-
-            <h2>Get In Touch</h2>
-
-            <p>📞 +94 70 788 9923</p>
-
-            <p>📧 enixtravels2@gmail.com</p>
-
-            <p>📍 Colombo 03, Jaya Road</p>
-
-            <div class="contact-social-links">
-                <a href="#">📘 Facebook</a>
-                <a href="#">📷 Instagram</a>
-                <a href="#">💬 WhatsApp</a>
-                <a href="#">𝕏 Twitter</a>
-                <a href="#">▶ YouTube</a>
+                <div class="social-platforms">
+                    <a href="#" class="social-btn" aria-label="Facebook">FB</a>
+                    <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+                    <a href="#" class="social-btn" aria-label="WhatsApp">WA</a>
+                    <a href="#" class="social-btn" aria-label="Twitter">TW</a>
+                    <a href="#" class="social-btn" aria-label="YouTube">YT</a>
+                </div>
             </div>
 
+            <!-- Glassmorphism Form -->
+            <div class="contact-form-panel glass-panel">
+                <h3>Inquire Online</h3>
+                <p>Fill out the fields below, and a destination specialist will contact you within 24 hours.</p>
+                <form action="#" method="POST" onsubmit="return false;">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <input type="tel" class="form-input" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Desired Destination" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" placeholder="Describe your dream vacation (dates, preferences, traveler count)..." required></textarea>
+                    </div>
+                    <button type="submit" class="glow-btn form-submit-btn">Send Inquiry</button>
+                </form>
+            </div>
         </div>
 
-
-
-        <div class="contact-form">
-
-            <h2>Send Us A Message</h2>
-
-            <form action="contact.html" method="get">
-
-                <input type="text"
-                    name="fullname"
-                    placeholder="Your Name">
-
-                <input type="email"
-                    name="email"
-                    placeholder="Email Address">
-
-                <input type="text"
-                    name="contact"
-                    placeholder="Phone Number">
-
-                <input type="text"
-                    name="destination"
-                    placeholder="Where Do You Want To Travel">
-
-                <textarea
-                    name="activities"
-                    placeholder="Tell Us About Your Plan"></textarea>
-
-                <button type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-
-
-    <section class="feedback">
-
-        <h2>What Our Customers Say</h2>
-
-        <div class="feedback-viewport">
-
-        <div class="feedback-track">
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Amazing experience with ENIX Travels. Our Maldives trip was perfectly organized from start to finish.</p>
-                <h4>Sarah Johnson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Everything was perfectly organized for our Dubai holiday. The desert safari was unforgettable.</p>
-                <h4>David Brown</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Our Bali trip exceeded expectations. The team handled every detail so we could just relax.</p>
-                <h4>Emily Carter</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Thailand was magical. Great hotels, smooth transfers and a guide who really knew the islands.</p>
-                <h4>Michael Lee</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Switzerland was breathtaking. ENIX planned the perfect mix of trains, views and cosy hotels.</p>
-                <h4>Olivia Smith</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Paris was the romantic getaway we hoped for. Booking with ENIX made everything effortless.</p>
-                <h4>James Wilson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Singapore with the kids was a breeze. Family friendly planning and great recommendations.</p>
-                <h4>Priya Nair</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Langkawi was stunning. The whole booking process with ENIX Travels was smooth and stress free.</p>
-                <h4>Daniel Perera</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Our honeymoon in the Maldives was unforgettable. Thank you ENIX Travels for the perfect start.</p>
-                <h4>Anushka Fernando</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Dubai exceeded all expectations. Luxury hotel, great tours, and excellent customer service.</p>
-                <h4>Robert Taylor</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Bali adventure package was thrilling. The trekking and rafting were perfectly arranged.</p>
-                <h4>Sophie Martin</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Booked our Switzerland scenic escape through ENIX. Friendly support throughout the trip.</p>
-                <h4>Kasun Silva</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Paris city highlights tour was beautifully planned. Every landmark, right on schedule.</p>
-                <h4>Laura Davies</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Singapore city wonders package was fantastic value. Will definitely book with ENIX again.</p>
-                <h4>Nimal Perera</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Kuala Lumpur city tour was well organised, comfortable hotels and a very helpful travel team.</p>
-                <h4>Chloe Anderson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Phuket island escape was paradise. ENIX Travels made the whole trip completely stress free.</p>
-                <h4>Tharindu Jayasuriya</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Our Bangkok and Pattaya tour was unforgettable, from temples to night markets. Highly recommend.</p>
-                <h4>Grace Thompson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Maldives escape was pure bliss. Water villa views every morning, truly a dream holiday.</p>
-                <h4>Hannah Wright</h4>
-            </div>
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Amazing experience with ENIX Travels. Our Maldives trip was perfectly organized from start to finish.</p>
-                <h4>Sarah Johnson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Everything was perfectly organized for our Dubai holiday. The desert safari was unforgettable.</p>
-                <h4>David Brown</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Our Bali trip exceeded expectations. The team handled every detail so we could just relax.</p>
-                <h4>Emily Carter</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Thailand was magical. Great hotels, smooth transfers and a guide who really knew the islands.</p>
-                <h4>Michael Lee</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Switzerland was breathtaking. ENIX planned the perfect mix of trains, views and cosy hotels.</p>
-                <h4>Olivia Smith</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Paris was the romantic getaway we hoped for. Booking with ENIX made everything effortless.</p>
-                <h4>James Wilson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Singapore with the kids was a breeze. Family friendly planning and great recommendations.</p>
-                <h4>Priya Nair</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Langkawi was stunning. The whole booking process with ENIX Travels was smooth and stress free.</p>
-                <h4>Daniel Perera</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Our honeymoon in the Maldives was unforgettable. Thank you ENIX Travels for the perfect start.</p>
-                <h4>Anushka Fernando</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Dubai exceeded all expectations. Luxury hotel, great tours, and excellent customer service.</p>
-                <h4>Robert Taylor</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Bali adventure package was thrilling. The trekking and rafting were perfectly arranged.</p>
-                <h4>Sophie Martin</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Booked our Switzerland scenic escape through ENIX. Friendly support throughout the trip.</p>
-                <h4>Kasun Silva</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Paris city highlights tour was beautifully planned. Every landmark, right on schedule.</p>
-                <h4>Laura Davies</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Singapore city wonders package was fantastic value. Will definitely book with ENIX again.</p>
-                <h4>Nimal Perera</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐</div>
-                <p>Kuala Lumpur city tour was well organised, comfortable hotels and a very helpful travel team.</p>
-                <h4>Chloe Anderson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Phuket island escape was paradise. ENIX Travels made the whole trip completely stress free.</p>
-                <h4>Tharindu Jayasuriya</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Our Bangkok and Pattaya tour was unforgettable, from temples to night markets. Highly recommend.</p>
-                <h4>Grace Thompson</h4>
-            </div>
-
-            <div class="feedback-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p>Maldives escape was pure bliss. Water villa views every morning, truly a dream holiday.</p>
-                <h4>Hannah Wright</h4>
-            </div>
-
-        </div>
-
-        </div>
-
-    </section>
-
-
-
-
-    <footer>
-
-        <div class="footer-column">
-
-            <div class="footer-logo">
-                <img src="images/enix.jpeg" alt="ENIX Travels Logo">
+        <!-- Footer Column Areas -->
+        <footer class="footer-bottom">
+            <div class="footer-brand">
                 <h3>ENIX Travels</h3>
+                <p>Redefining luxury travel and custom explorations. Experience personalized itineraries designed with absolute attention to detail.</p>
             </div>
-
-            <p>Explore the world with confidence.</p>
-
-            <div class="social-links">
-                <a href="#">📘 Facebook</a>
-                <a href="#">📷 Instagram</a>
-                <a href="#">💬 WhatsApp</a>
-                <a href="#">𝕏 Twitter</a>
-                <a href="#">▶ YouTube</a>
+            <div class="footer-links-grid">
+                <div class="footer-nav">
+                    <h4>Navigate</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#destinations">Destinations</a>
+                    <a href="#packages">Packages</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-support">
+                    <h4>Emergency Help</h4>
+                    <p>24/7 Global Travel Support Helpline for active bookings.</p>
+                    <span class="helpline">+94 76 911 0000</span>
+                </div>
             </div>
+        </footer>
 
+        <div class="copyright">
+            <p>© 2026 ENIX Travels. All Rights Reserved.</p>
+            <p>Designed with luxury aesthetic and pure CSS micro-interactions.</p>
         </div>
-
-
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About Us</a>
-
-            <a href="destinations.html">Destinations and Gallery</a>
-
-            <a href="packages.html">Packages</a>
-
-            <a href="traveltips.html">Travel Tips</a>
-
-            <a href="contact.html">Contact Us</a>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h3>Contact Us</h3>
-
-            <p>+94 70 788 9923</p>
-
-            <p>enixtravels2@gmail.com</p>
-
-            <p>Colombo 03, Jaya Road</p>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h3>Emergency Helpline</h3>
-
-            <p>24/7 Travel Emergency Support</p>
-
-            <p class="helpline-number">+94 76 911 0000</p>
-
-        </div>
-
-    </footer>
-
-
-
-    <div class="copyright">
-
-        © 2026 ENIX Travels.
-        All Rights Reserved.
-
-    </div>
+    </section>
 
 </body>
 </html>
