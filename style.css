@@ -2210,4 +2210,72 @@ textarea.form-input {
     grid-template-columns: 1fr;
     gap: 0;
   }
+
+  /* Mobile Horizontal Scroll Carousels for grids */
+  .why-grid,
+  .services-grid,
+  .tips-grid,
+  .team-grid,
+  .values-grid,
+  .category-grid,
+  .info-cards {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 20px !important;
+    padding: 10px 8% 30px 8% !important;
+    margin-left: -8% !important;
+    margin-right: -8% !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbars for a clean look */
+  .why-grid::-webkit-scrollbar,
+  .services-grid::-webkit-scrollbar,
+  .tips-grid::-webkit-scrollbar,
+  .team-grid::-webkit-scrollbar,
+  .values-grid::-webkit-scrollbar,
+  .category-grid::-webkit-scrollbar,
+  .info-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why-grid,
+  .services-grid,
+  .tips-grid,
+  .team-grid,
+  .values-grid,
+  .category-grid,
+  .info-cards {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Card items inside the horizontal scroll containers */
+  .why-box,
+  .service-card,
+  .tip-card,
+  .team-card,
+  .value-item,
+  .category-box,
+  .info-card {
+    flex: 0 0 280px !important; /* Fixed width for card items */
+    scroll-snap-align: center;
+    margin: 0 !important;
+    max-width: 280px !important;
+  }
+
+  /* Left-align container padding for first and last child offsets to look beautiful */
+  .why-grid::after,
+  .services-grid::after,
+  .tips-grid::after,
+  .team-grid::after,
+  .values-grid::after,
+  .category-grid::after,
+  .info-cards::after {
+    content: '';
+    flex: 0 0 8%;
+  }
 }
+
