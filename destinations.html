@@ -1,262 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Explore our destinations guide and visa summary. Get detailed travel, medical, and local guide advice for Maldives, Dubai, Bali, and more.">
     <title>Destinations & Gallery | ENIX Travels</title>
-
-    <link rel="stylesheet" href="dstyle.css">
+    <!-- Link to premium redesign stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <!-- ==========================================
+      1. GLASSMORPHISM STICKY NAVIGATION
+    ========================================== -->
     <header class="navbar">
-
         <a href="index.html" class="logo-section">
-
-            <img src="images/enix.jpeg" alt="Logo">
-
+            <img src="logo.jpeg" alt="ENIX Travels Logo">
             <h2>ENIX Travels</h2>
-
         </a>
 
-        <nav>
+        <!-- CSS Checkbox Hack for Mobile Navigation -->
+        <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+        <label for="nav-checkbox" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
+        <nav class="nav-menu">
             <ul>
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="about.html">About Us</a></li>
-
-                <li><a href="destinations.html">Destinations and Gallery</a></li>
-
-                <li><a href="packages.html">Packages</a></li>
-
-                <li><a href="traveltips.html">Travel Tips</a></li>
-
-                <li><a href="contact.html">Contact Us</a></li>
-
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="traveltips.html" class="nav-link">Travel Tips</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-    <section class="hero">
-
-        <div class="hero-slider">
-            <img src="images/Destinations/d2.jpeg" alt="ENIX Travels Destinations">
-            <img src="images/Destinations/d1.jpeg" alt="ENIX Travels Destinations">
-            <img src="images/Destinations/d3.jpeg" alt="ENIX Travels Destinations">
-            <img src="images/Destinations/d4.jpeg" alt="ENIX Travels Destinations">
-            <img src="images/Destinations/d5.jpeg" alt="ENIX Travels Destinations">
-            <img src="images/Destinations/d6.jpeg" alt="ENIX Travels Destinations">
-        </div>
-
-        <div class="hero-overlay"></div>
-
+    <!-- ==========================================
+      2. SUB-HERO SECTION
+    ========================================== -->
+    <section class="sub-hero sub-hero-destinations">
         <div class="hero-content">
-
-            <h1>Discover Our Destinations</h1>
-
-            <p>
-                Eight unforgettable countries, endless experiences.
-                Explore the gallery, find your category and discover
-                everything you need to know before you go.
+            <h1 class="animate-item hero-title">Discover Our Destinations</h1>
+            <p class="animate-item hero-sub">
+                Eight unforgettable countries, endless experiences. Explore the gallery, find your category and discover everything you need to know before you go.
             </p>
-
         </div>
-
     </section>
 
-
-
-    <section class="gallery-section">
-
-        <h2 class="section-title">Destination Gallery</h2>
-
-        <div class="gallery-grid">
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/Male/m2.jpeg" alt="Maldives">
-                    <img src="images/Male/m1.jpeg"  alt="Maldives">
-                    <img src="images/Male/m4.jpeg" alt="Maldives">
-                    <img src="images/Male/m3.jpeg" alt="Maldives">
-                    <img src="images/Male/m6.jpeg" alt="Maldives">
-                    <img src="images/Male/m5.jpeg" alt="Maldives">
-                    <img src="images/Male/m7.jpeg" alt="Maldives">
-                    <img src="images/Male/m8.jpeg" alt="Maldives">
-                    <img src="images/Male/m9.jpeg" alt="Maldives">
-                    <img src="images/Male/m10.jpeg" alt="Maldives">
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#maldives-info">Maldives</a></h4>
-                    <p>Beach & Island Getaway</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/dubai/q15.jpeg" alt="Dubai">
-                    <img src="images/dubai/q5.jpeg" alt="Dubai">
-                    <img src="images/dubai/q16.jpeg" alt="Dubai">
-                    <img src="images/dubai/q24.jpeg" alt="Dubai">
-                    <img src="images/dubai/q21.jpeg" alt="Dubai">
-                    <img src="images/dubai/q23.jpeg" alt="Dubai">
-                    <img src="images/dubai/q29.jpeg"alt="Dubai">
-                    <img src="images/dubai/q30.jpeg" alt="Dubai">
-                    <img src="images/dubai/q7.jpeg" alt="Dubai">
-                    <img src="images/dubai/q17.jpeg" alt="Dubai">
-                    
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#dubai-info">Dubai</a></h4>
-                    <p>Luxury & City Escape</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="C:\Users\ASUS\Desktop\Travelagency\Bali\IMG_8901.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_8892.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9114.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_8898.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9117.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9111.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9110.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_8896.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9123.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9125.JPG" alt="Bali">
-                    <img src="images/Bali/IMG_9135.JPG" alt="Bali">
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#bali-info">Bali</a></h4>
-                    <p>Beach & Island Getaway</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/Thailand/t1.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t2.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t4.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t6.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t8.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t7.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t5.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t3.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t9.jpeg" alt="Thailand">
-                    <img src="images/Thailand/t10.jpeg" alt="Thailand">
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#thailand-info">Thailand</a></h4>
-                    <p>Cultural & Heritage Tour</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/switzerland/IMG_9073.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9078.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9081.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9079.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9074.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9090.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9101.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9107.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9095.JPG" alt="Switzerland">
-                    <img src="images/switzerland/IMG_9082.JPG" alt="Switzerland">
-                    
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#switzerland-info">Switzerland</a></h4>
-                    <p>Adventure & Trekking</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/Paris/p3.jpeg" alt="Paris">
-                    <img src="images/Paris/p1.jpeg" alt="Paris">
-                    <img src="images/Paris/p2.jpeg" alt="Paris">
-                    <img src="images/Paris/p4.jpeg" alt="Paris">
-                    <img src="images/Paris/p10.jpeg" alt="Paris">
-                    <img src="images/Paris/p5.jpeg" alt="Paris">
-                    <img src="images/Paris/p6.jpeg" alt="Paris">
-                    <img src="images/Paris/p9.jpeg" alt="Paris">
-                    <img src="images/Paris/p7.jpeg" alt="Paris">
-                    <img src="images/Paris/p8.jpeg" alt="Paris">
-                    
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#paris-info">Paris</a></h4>
-                    <p>Luxury & Honeymoon Tour</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/Singa/s10.jpeg" alt="Singapore">
-                    <img src="images/Singa/s2.jpeg" alt="Singapore">
-                    <img src="images/Singa/s3.jpeg" alt="Singapore">
-                    <img src="images/Singa/s4.jpeg" alt="Singapore">
-                    <img src="images/Singa/s5.jpeg" alt="Singapore">
-                    <img src="images/Singa/s6.jpeg" alt="Singapore">
-                    <img src="images/Singa/s7.jpeg" alt="Singapore">
-                    <img src="images/Singa/s8.jpeg" alt="Singapore">
-                    <img src="images/Singa/s9.jpeg" alt="Singapore">
-                    <img src="images/Singa/s1.jpeg" alt="Singapore">
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#singapore-info">Singapore</a></h4>
-                    <p>Family Holiday Package</p>
-                </div>
-            </div>
-
-            <div class="gallery-item">
-                <div class="gallery-slider">
-                    <img src="images/Malaysia/m9.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m4.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m7.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m1.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m3.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m5.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m2.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m8.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m6.jpeg" alt="Malaysia">
-                    <img src="images/Malaysia/m10.jpeg" alt="Malaysia">
-                </div>
-                <div class="gallery-caption">
-                    <h4><a href="#malaysia-info">Malaysia</a></h4>
-                    <p>Beach & Island Getaway</p>
-                </div>
-            </div>
-
+    <!-- ==========================================
+      3. DESTINATIONS GALLERY (CSS Grid)
+    ========================================== -->
+    <section class="destinations">
+        <div class="section-header">
+            <h2>Destination Gallery</h2>
+            <p>Explore some of the most beautiful and iconic locations from our worldwide partner network.</p>
         </div>
 
+        <div class="destinations-grid">
+            <!-- 1. Maldives -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Beach</span>
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives Lagoon">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Maldives</h3>
+                        <p>Impossibly clear turquoise waters, private sandbanks, and luxury overwater villas fringe this Indian Ocean sanctuary.</p>
+                    </div>
+                    <a href="#maldives-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 2. Dubai -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Luxury</span>
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai City Skyline">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Dubai</h3>
+                        <p>Futuristic architecture rises out of desert sands, hosting fine dining and luxury shopping hotspots.</p>
+                    </div>
+                    <a href="#dubai-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 3. Bali -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Nature</span>
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali Ubud Water Temple">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Bali</h3>
+                        <p>Tropical rainforests, cascading waterfalls, terraced rice fields, and ancient, spiritual temples.</p>
+                    </div>
+                    <a href="#bali-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 4. Thailand -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Exotic</span>
+                    <img src="https://images.unsplash.com/photo-1528181304800-2f5353a98ef3?auto=format&fit=crop&w=800&q=80" alt="Krabi Thailand Beach">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Thailand</h3>
+                        <p>Golden palaces, dynamic floating street markets, and dramatic limestone cliffs plunging into crystal bays.</p>
+                    </div>
+                    <a href="#thailand-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 5. Switzerland -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Alpine</span>
+                    <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=80" alt="Switzerland Matterhorn Valley">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Switzerland</h3>
+                        <p>Snow-capped peaks, clean air, luxury mountain railways, and lakes straight from a storybook.</p>
+                    </div>
+                    <a href="#switzerland-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 6. Paris -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Romance</span>
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Eiffel Tower Paris">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Paris</h3>
+                        <p>The global capital of art, fashion, and romance. Timeless cafes, historical museums, and scenic river cruises.</p>
+                    </div>
+                    <a href="#paris-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 7. Singapore -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Futuristic</span>
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Singapore Marina Bay">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Singapore</h3>
+                        <p>A pristine, super-efficient city-state blending futuristic biophilic architecture with vibrant hawker centers.</p>
+                    </div>
+                    <a href="#singapore-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+
+            <!-- 8. Malaysia -->
+            <div class="destination-card">
+                <div class="dest-img-container">
+                    <span class="dest-badge">Heritage</span>
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=800&q=80" alt="KL Petronas Towers Malaysia">
+                </div>
+                <div class="dest-content">
+                    <div>
+                        <h3>Malaysia</h3>
+                        <p>Vibrant cities hosting historic colonial landmarks, modern towers, and pristine islands like Langkawi.</p>
+                    </div>
+                    <a href="#malaysia-info" class="dest-link">Travel Info <span>↓</span></a>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- ==========================================
+      4. CATEGORIES SECTION
+    ========================================== -->
     <section class="categories-section">
-
-        <h2 class="section-title">Tour Package Categories</h2>
-
-        <p class="section-sub">
-            Browse our destinations by category to quickly find the
-            type of holiday you're looking for.
-        </p>
+        <div class="section-header">
+            <h2>Travel Categories</h2>
+            <p>Filter destinations by your preferred vacation style to find your matching paradise.</p>
+        </div>
 
         <div class="category-grid">
-
             <div class="category-box">
                 <h3>🏖 Beach & Island Getaways</h3>
-                <p class="category-desc">
-                    Relaxed island escapes built around soft white
-                    sand, warm turquoise water and laid back resort
-                    living, perfect for unwinding far from the city.
-                </p>
+                <p class="category-desc">Relaxed island escapes built around soft white sand, warm turquoise water and laid-back resort living, perfect for unwinding.</p>
                 <ul>
                     <li><a href="#maldives-info">Maldives</a></li>
                     <li><a href="#bali-info">Bali</a></li>
@@ -266,11 +205,7 @@
 
             <div class="category-box">
                 <h3>🏛 Cultural & Heritage Tours</h3>
-                <p class="category-desc">
-                    Journeys centred on history, temples, local
-                    traditions and city landmarks, ideal for travellers
-                    who want to understand a destination's story.
-                </p>
+                <p class="category-desc">Journeys centered on history, temples, local traditions, and city landmarks, ideal for curious minds.</p>
                 <ul>
                     <li><a href="#thailand-info">Thailand</a></li>
                     <li><a href="#malaysia-info">Malaysia</a></li>
@@ -280,11 +215,7 @@
 
             <div class="category-box">
                 <h3>🥾 Adventure & Trekking</h3>
-                <p class="category-desc">
-                    Active itineraries for travellers who want their
-                    holiday to include hikes, mountains, water sports
-                    and a bit of adrenaline along the way.
-                </p>
+                <p class="category-desc">Active itineraries for travelers who want their holiday to include hikes, mountains, water sports, and adrenaline.</p>
                 <ul>
                     <li><a href="#switzerland-info">Switzerland</a></li>
                     <li><a href="#bali-info">Bali</a></li>
@@ -294,261 +225,178 @@
 
             <div class="category-box">
                 <h3>👨‍👩‍👧 Family Holiday Packages</h3>
-                <p class="category-desc">
-                    Easy going itineraries with family friendly
-                    attractions, comfortable accommodation and a pace
-                    that works well for travellers of every age.
-                </p>
+                <p class="category-desc">Easygoing itineraries with family-friendly attractions, child-safe accommodation, and a balanced, relaxed pace.</p>
                 <ul>
                     <li><a href="#singapore-info">Singapore</a></li>
                     <li><a href="#dubai-info">Dubai</a></li>
                     <li><a href="#switzerland-info">Switzerland</a></li>
-                    <li><a href="#paris-info">Paris</a></li>
                 </ul>
             </div>
 
             <div class="category-box">
                 <h3>🛍 Shopping & Entertainment</h3>
-                <p class="category-desc">
-                    Destinations built for those who want world class
-                    shopping, vibrant nightlife and non-stop
-                    entertainment alongside their holiday.
-                </p>
+                <p class="category-desc">Destinations built for those who want world-class shopping, vibrant nightlife, theme parks, and entertainment.</p>
                 <ul>
                     <li><a href="#dubai-info">Dubai</a></li>
                     <li><a href="#singapore-info">Singapore</a></li>
                     <li><a href="#malaysia-info">Malaysia</a></li>
-                    <li><a href="#thailand-info">Thailand</a></li>
                 </ul>
             </div>
- 
 
             <div class="category-box">
                 <h3>💍 Luxury & Honeymoon Tours</h3>
-                <p class="category-desc">
-                    Premium stays and romantic experiences designed for
-                    couples, featuring five star comfort and thoughtful
-                    touches throughout the trip.
-                </p>
+                <p class="category-desc">Premium stays and romantic experiences designed for couples, featuring five-star luxury comfort and private excursions.</p>
                 <ul>
                     <li><a href="#maldives-info">Maldives</a></li>
                     <li><a href="#dubai-info">Dubai</a></li>
                     <li><a href="#paris-info">Paris</a></li>
-                    <li><a href="#switzerland-info">Switzerland</a></li>
                 </ul>
             </div>
-
         </div>
-
     </section>
 
-
+    <!-- ==========================================
+      5. KNOW BEFORE YOU GO (Country Details)
+    ========================================== -->
     <section class="country-info-section">
-
-        <h2 class="section-title">Know Before You Go</h2>
-
-        <p class="section-sub">
-            Everything you need to know about each destination —
-            places to visit, health considerations and local guide
-            availability.
-        </p>
-
-        <div class="country-info-card" id="maldives-info">
-
-            <h3>Maldives</h3>
-
-            <div class="info-grid">
-
-                <div class="info-col">
-                    <h5>Medical & Health</h5>
-                    <p>No mandatory vaccinations required. Resorts have on site medical staff; serious cases are transferred to Male by speedboat or seaplane. Reef-safe sunscreen recommended.</p>
-                </div>
-
-                <div class="info-col">
-                    <h5>Local Guides</h5>
-                    <p>We provide local resort guides who can accompany you throughout your stay, including for snorkelling trips, island excursions and water sport activities. Multilingual guides can be arranged on request for travellers who prefer a language other than English.</p>
-                </div>
-
-            </div>
-
+        <div class="section-header">
+            <h2>Know Before You Go</h2>
+            <p>Crucial travel information compiled by our destination specialists covering medical and local guidance guidelines.</p>
         </div>
 
-        <div class="country-info-card" id="dubai-info">
-
-            <h3>Dubai</h3>
-
+        <!-- 1. Maldives -->
+        <div class="country-info-card" id="maldives-info">
+            <h3>Maldives</h3>
             <div class="info-grid">
+                <div class="info-col">
+                    <h5>Medical & Health</h5>
+                    <p>No mandatory vaccinations required. Resorts have on-site medical staff; serious cases are transferred to Male by speedboat or seaplane. Reef-safe sunscreen recommended.</p>
+                </div>
+                <div class="info-col">
+                    <h5>Local Guides</h5>
+                    <p>We provide local resort guides who can accompany you throughout your stay, including for snorkeling trips, island excursions and water sport activities. Multilingual guides can be arranged on request.</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- 2. Dubai -->
+        <div class="country-info-card" id="dubai-info">
+            <h3>Dubai</h3>
+            <div class="info-grid">
                 <div class="info-col">
                     <h5>Medical & Health</h5>
                     <p>No mandatory vaccinations. High standard of healthcare with modern hospitals in the city. Travel insurance recommended for non-residents.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>Our licensed local guides can travel with you for city tours and desert safaris, sharing insider knowledge of the destination. If you're travelling in a group that prefers Arabic or another language, we can arrange a guide who speaks it.</p>
+                    <p>Our licensed local guides can travel with you for city tours and desert safaris, sharing insider knowledge of the destination. Multilingual guides available upon request.</p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- 3. Bali -->
         <div class="country-info-card" id="bali-info">
-
             <h3>Bali</h3>
-
             <div class="info-grid">
-
                 <div class="info-col">
                     <h5>Medical & Health</h5>
-                    <p>Hepatitis A and Typhoid vaccinations are often recommended. Drink bottled water. Clinics are widely available in tourist areas.</p>
+                    <p>Hepatitis A and Typhoid vaccinations are often recommended. Drink bottled water. Modern clinics are widely available in main tourist hubs like Seminyak, Kuta, and Ubud.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>Local trekking and cultural guides are available to join you for volcano sunrise hikes and temple visits. We can also arrange guides in Indonesian or other languages if that suits your group better.</p>
+                    <p>Local trekking and cultural guides are available to join you for volcano sunrise hikes and temple visits. Private driver-guides can be arranged for custom routes.</p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- 4. Thailand -->
         <div class="country-info-card" id="thailand-info">
-
             <h3>Thailand</h3>
-
             <div class="info-grid">
-
                 <div class="info-col">
                     <h5>Medical & Health</h5>
-                    <p>Hepatitis A and Typhoid vaccinations often recommended. Good hospital network in Bangkok and Phuket. Avoid tap water.</p>
+                    <p>Hepatitis A and Typhoid vaccinations often recommended. Good hospital network in Bangkok and Phuket. Avoid tap water and opt for bottled mineral water.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>We can provide local guides to accompany you on temple tours, island hopping trips and food experiences. If English isn't your first language, just let us know and we'll arrange a guide who speaks yours.</p>
+                    <p>We provide licensed local guides for historical temple tours in Ayutthaya, island hopping trips in Phi Phi, and street food excursions. Language-specific guides are bookable.</p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- 5. Switzerland -->
         <div class="country-info-card" id="switzerland-info">
-
             <h3>Switzerland</h3>
-
             <div class="info-grid">
-
                 <div class="info-col">
                     <h5>Medical & Health</h5>
-                    <p>No special vaccinations required. Excellent healthcare system. Travel insurance with mountain rescue cover is recommended for hiking trips.</p>
+                    <p>No special vaccinations required. Excellent healthcare system. Travel insurance with mountain rescue coverage is highly recommended for alpine sports and trekking.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>Certified mountain guides are available to accompany you on alpine hikes for added safety and local insight. Guides who speak German or other languages can be arranged for travellers who prefer it.</p>
+                    <p>Certified alpine mountain guides are available to accompany you on high-altitude hikes for safety and geographical context. Multilingual guides easily arranged.</p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- 6. Paris -->
         <div class="country-info-card" id="paris-info">
-
             <h3>Paris</h3>
-
             <div class="info-grid">
-
                 <div class="info-col">
                     <h5>Medical & Health</h5>
-                    <p>No special vaccinations required. High standard public and private healthcare. EU travel insurance or international cover recommended.</p>
+                    <p>No special vaccinations required. High standard public and private healthcare. EU health insurance cards or international coverage recommended.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>Our local guides can join you for museum visits and walking tours around the city. If you'd feel more comfortable with a French speaking guide, or any other language, we can arrange that for your trip.</p>
+                    <p>Expert local art historians and guides are available for museum walking tours, Louvre private tours, and historical city walking tours.</p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- 7. Singapore -->
         <div class="country-info-card" id="singapore-info">
-
             <h3>Singapore</h3>
-
             <div class="info-grid">
-
                 <div class="info-col">
                     <h5>Medical & Health</h5>
-                    <p>No mandatory vaccinations. Excellent healthcare system, considered one of the best in Asia. Tap water is safe to drink.</p>
+                    <p>No mandatory vaccinations. World-class healthcare system. Tap water is perfectly safe and treated to WHO standards. Carry hydration in the humid climate.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>Local guides are available to accompany your family or group around the city's attractions and food trails. We can also provide guides in different languages depending on your group's needs.</p>
+                    <p>Local guides are available to accompany your family or corporate group around biophilic city gardens, cultural ethnic quarters, and culinary heritage trails.</p>
                 </div>
-
             </div>
-
         </div>
 
+        <!-- 8. Malaysia -->
         <div class="country-info-card" id="malaysia-info">
-
             <h3>Malaysia</h3>
-
             <div class="info-grid">
-
                 <div class="info-col">
                     <h5>Medical & Health</h5>
-                    <p>Hepatitis A vaccination often recommended. Good hospital network in Kuala Lumpur. Drink bottled water outside major cities.</p>
+                    <p>Hepatitis A vaccination often recommended. Excellent hospital networks in Kuala Lumpur and Penang. Drink bottled water outside major metropolitan areas.</p>
                 </div>
-
                 <div class="info-col">
                     <h5>Local Guides</h5>
-                    <p>We can arrange local guides to travel with you for city tours, cable car trips and island excursions. If you would prefer a guide who speaks Malay or another language, just let us know when booking.</p>
+                    <p>We arrange local guides for heritage walks in Penang, cable car tours in Genting Highlands, and nature treks in Langkawi. Guides fluent in multiple languages are bookable.</p>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-    <section class="midslider-section">
-
-        <div class="midslider">
-            <img src="images/Destinations/d7.jpeg" alt="ENIX Travels">
-            <img src="images/Destinations/d8.jpeg" alt="ENIX Travels">
-            <img src="images/Destinations/d9.jpeg" alt="ENIX Travels">
-            <img src="images/Destinations/d10.jpeg" alt="ENIX Travels">
-            <img src="images/Destinations/d11.jpeg" alt="ENIX Travels">
-            <img src="images/Destinations/d12.jpeg" alt="ENIX Travels">
-            <img src="images/Destinations/d13.jpeg" alt="ENIX Travels">
-        </div>
-
-        <div class="midslider-overlay">
-            <h2>Your Next Adventure Awaits</h2>
-        </div>
-
-    </section>
-
-
+    <!-- ==========================================
+      6. VISA REQUIREMENT SUMMARY
+    ========================================== -->
     <section class="table-section">
-
-        <h2 class="section-title">Visa Requirement Summary</h2>
-
-        <p class="section-sub">
-            A quick overview of visa requirements for each of our
-            destination countries.
-        </p>
+        <div class="section-header">
+            <h2>Visa Requirement Summary</h2>
+            <p>A quick summary of visa requirements by country for tourists. Check details well in advance of departure.</p>
+        </div>
 
         <div class="table-wrapper">
-
             <table class="tour-table">
-
-                <caption>Visa Requirement Summary by Country</caption>
-
+                <caption>Visa Summary Table</caption>
                 <thead>
                     <tr>
                         <th>Country</th>
@@ -557,139 +405,97 @@
                         <th>Approx. Processing Time</th>
                     </tr>
                 </thead>
-
                 <tbody>
-
                     <tr>
                         <td>Maldives</td>
-                        <td>Not Required for Sri Lankans</td>
+                        <td>Not Required (For most nationalities)</td>
                         <td>Visa on Arrival (30 Days)</td>
                         <td>Immediate</td>
                     </tr>
-
                     <tr>
                         <td>Dubai (UAE)</td>
                         <td>Required</td>
-                        <td>Tourist Visa</td>
+                        <td>E-Tourist Visa</td>
                         <td>3 - 5 Working Days</td>
                     </tr>
-
                     <tr>
                         <td>Bali (Indonesia)</td>
-                        <td>Not Required for Short Stay</td>
-                        <td>Visa Exemption (30 Days)</td>
+                        <td>Visa Exemption / VOA</td>
+                        <td>VOA (30 Days)</td>
                         <td>Immediate</td>
                     </tr>
-
                     <tr>
                         <td>Thailand</td>
-                        <td>Not Required for Short Stay</td>
+                        <td>Visa Exemption / VOA</td>
                         <td>Visa Exemption (30 Days)</td>
                         <td>Immediate</td>
                     </tr>
-
                     <tr>
                         <td>Switzerland</td>
                         <td>Required</td>
-                        <td>Schengen Visa</td>
+                        <td>Schengen Tourist Visa</td>
                         <td>10 - 15 Working Days</td>
                     </tr>
-
                     <tr>
                         <td>Paris (France)</td>
                         <td>Required</td>
-                        <td>Schengen Visa</td>
+                        <td>Schengen Tourist Visa</td>
                         <td>10 - 15 Working Days</td>
                     </tr>
-
                     <tr>
                         <td>Singapore</td>
-                        <td>Required</td>
-                        <td>Tourist Visa</td>
-                        <td>3 - 5 Working Days</td>
+                        <td>Visa Exemption / E-Visa</td>
+                        <td>SG Arrival Card (30 Days)</td>
+                        <td>2 - 3 Working Days</td>
                     </tr>
-
                     <tr>
                         <td>Malaysia</td>
-                        <td>Not Required for Short Stay</td>
-                        <td>Visa Exemption (30 Days)</td>
-                        <td>Immediate</td>
+                        <td>E-Visa / Visa Exemption</td>
+                        <td>E-Tourist Visa / MDAC</td>
+                        <td>1 - 3 Working Days</td>
                     </tr>
-
                 </tbody>
-
             </table>
-
         </div>
 
-        <div class="contact-cta">
-            <a href="packages.html" class="btn-contact-cta">View Our Travel Packages</a>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="packages.html" class="glow-btn">View Travel Packages</a>
         </div>
-
     </section>
 
-
-    <footer>
-
-        <div class="footer-column">
-
-            <div class="footer-logo">
-                <img src="images/enix.jpeg"  alt="ENIX Travels Logo">
+    <!-- ==========================================
+      7. CONTACT & FOOTER SECTION
+    ========================================== -->
+    <section id="contact" class="contact-wrapper">
+        <!-- Footer Column Areas -->
+        <footer class="footer-bottom">
+            <div class="footer-brand">
                 <h3>ENIX Travels</h3>
+                <p>Redefining luxury travel and custom explorations. Experience personalized itineraries designed with absolute attention to detail.</p>
             </div>
-
-            <p>Explore the world with confidence.</p>
-
-            <div class="social-links">
-                <a href="#">📘 Facebook</a>
-                <a href="#">📷 Instagram</a>
-                <a href="#">💬 WhatsApp</a>
-                <a href="#">𝕏 Twitter</a>
-                <a href="#">▶ YouTube</a>
+            <div class="footer-links-grid">
+                <div class="footer-nav">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="traveltips.html">Travel Tips</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-support">
+                    <h4>Emergency Help</h4>
+                    <p>24/7 Global Travel Support Helpline for active bookings.</p>
+                    <span class="helpline">+94 76 911 0000</span>
+                </div>
             </div>
+        </footer>
 
+        <div class="copyright">
+            <p>© 2026 ENIX Travels. All Rights Reserved.</p>
+            <p>Designed with luxury aesthetic and pure CSS micro-interactions.</p>
         </div>
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="destinations.html">Destinations and Gallery</a>
-            <a href="packages.html">Packages</a>
-            <a href="traveltips.html">Travel Tips</a>
-            <a href="contact.html">Contact Us</a>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Contact Us</h3>
-
-            <p>+94 70 788 9923</p>
-            <p>enixtravels2@gmail.com</p>
-            <p>Colombo 03, Jaya Road</p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Emergency Helpline</h3>
-
-            <p>24/7 Travel Emergency Support</p>
-            <p class="helpline-number">+94 76 911 0000</p>
-
-        </div>
-
-    </footer>
-
-    <div class="copyright">
-
-        © 2026 ENIX Travels. All Rights Reserved.
-
-    </div>
+    </section>
 
 </body>
-
 </html>

@@ -1,435 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Contact ENIX Travels to book your luxury packages or consult on customized travel planning with our destination specialists.">
     <title>Booking & Contact | ENIX Travels</title>
-
-    <link rel="stylesheet" href="cstyle.css">
+    <!-- Link to premium redesign stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <!-- ==========================================
+      1. GLASSMORPHISM STICKY NAVIGATION
+    ========================================== -->
     <header class="navbar">
-
         <a href="index.html" class="logo-section">
-
-            <img src="images/enix.jpeg" alt="Logo">
-
+            <img src="logo.jpeg" alt="ENIX Travels Logo">
             <h2>ENIX Travels</h2>
-
         </a>
 
-        <nav>
+        <!-- CSS Checkbox Hack for Mobile Navigation -->
+        <input type="checkbox" id="nav-checkbox" class="nav-checkbox">
+        <label for="nav-checkbox" class="hamburger-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
+        <nav class="nav-menu">
             <ul>
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="about.html">About Us</a></li>
-
-                <li><a href="destinations.html">Destinations and Gallery</a></li>
-
-                <li><a href="packages.html">Packages</a></li>
-
-                <li><a href="traveltips.html">Travel Tips</a></li>
-
-                <li><a href="contact.html">Contact Us</a></li>
-
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                <li><a href="packages.html" class="nav-link">Packages</a></li>
+                <li><a href="traveltips.html" class="nav-link">Travel Tips</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-
-    <section class="hero">
-
+    <!-- ==========================================
+      2. SUB-HERO SECTION
+    ========================================== -->
+    <section class="sub-hero sub-hero-contact">
         <div class="hero-content">
-
-            <h1>Booking & Contact</h1>
-
-            <p>
-                Ready to start your journey? Fill in the booking
-                inquiry form below or reach out to us directly.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="contact-info-section">
-
-        <h2>Get In Touch</h2>
-
-        <div class="contact-info-grid">
-
-            <div class="contact-info-box">
-                <h3>📞 Phone</h3>
-                <p>+94 70 788 9923</p>
-            </div>
-
-            <div class="contact-info-box">
-                <h3>📧 Email</h3>
-                <p>enyxtravels2@gmail.com</p>
-            </div>
-
-            <div class="contact-info-box">
-                <h3>📍 Address</h3>
-                <p>Colombo 03, Jaya Road</p>
-            </div>
-
-            <div class="contact-info-box">
-                <h3>📘 Facebook</h3>
-                <p><a href="#">/ENIXTravels</a></p>
-            </div>
-
-            <div class="contact-info-box">
-                <h3>📷 Instagram</h3>
-                <p><a href="#">@enixtravels</a></p>
-            </div>
-
-            <div class="contact-info-box">
-                <h3>💬 WhatsApp</h3>
-                <p><a href="#">+94 70 788 9923</a></p>
-            </div>
-
-            <div class="contact-info-box">
-                <h3>🌐 Website</h3>
-                <p><a href="index.html">www.enixtravels.com</a></p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="booking-section">
-
-        <h2 class="section-title">Booking Inquiry Form</h2>
-
-        <p class="section-sub">
-            Planning a tour with us? Fill in your details below and our
-            travel team will get back to you with the best options for
-            your trip.
-        </p>
-
-        <div class="selected-note" id="book-mld-01"><p>✓ You selected: <strong>Maldives Escape</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-mld-02"><p>✓ You selected: <strong>Maldives Honeymoon Bliss</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-dxb-01"><p>✓ You selected: <strong>Dubai Luxury Trip</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-dxb-02"><p>✓ You selected: <strong>Dubai City Explorer</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-bal-01"><p>✓ You selected: <strong>Bali Tropical Getaway</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-bal-02"><p>✓ You selected: <strong>Bali Adventure Package</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-tha-01"><p>✓ You selected: <strong>Bangkok & Pattaya Tour</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-tha-02"><p>✓ You selected: <strong>Phuket Island Escape</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-swz-01"><p>✓ You selected: <strong>Swiss Alps Adventure</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-swz-02"><p>✓ You selected: <strong>Switzerland Scenic Escape</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-par-01"><p>✓ You selected: <strong>Paris Romantic Getaway</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-par-02"><p>✓ You selected: <strong>Paris City Highlights</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-sin-01"><p>✓ You selected: <strong>Singapore City Wonders</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-sin-02"><p>✓ You selected: <strong>Singapore Family Fun</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-mys-01"><p>✓ You selected: <strong>Kuala Lumpur City Tour</strong> — please confirm your details below.</p></div>
-        <div class="selected-note" id="book-mys-02"><p>✓ You selected: <strong>Langkawi Island Retreat</strong> — please confirm your details below.</p></div>
-
-        <form class="booking-form" action="#" id="personal-details">
-
-            <h3 class="form-section-heading">Select Your Package</h3>
-
-            <p class="form-note">
-                First select your preferred country, then choose one of
-                the packages listed under that country.
-            </p>
-
-            <div class="form-group">
-                <label for="package">Select Country & Package</label>
-                <select id="package" name="package">
-                    <option value="">-- Select a Country & Package --</option>
-
-                    <optgroup label="Maldives">
-                        <option value="maldives-escape">Maldives Escape</option>
-                        <option value="maldives-honeymoon">Maldives Honeymoon Bliss</option>
-                    </optgroup>
-
-                    <optgroup label="Dubai">
-                        <option value="dubai-luxury">Dubai Luxury Trip</option>
-                        <option value="dubai-explorer">Dubai City Explorer</option>
-                    </optgroup>
-
-                    <optgroup label="Bali">
-                        <option value="bali-tropical">Bali Tropical Getaway</option>
-                        <option value="bali-adventure">Bali Adventure Package</option>
-                    </optgroup>
-
-                    <optgroup label="Thailand">
-                        <option value="thailand-bangkok">Bangkok & Pattaya Tour</option>
-                        <option value="thailand-phuket">Phuket Island Escape</option>
-                    </optgroup>
-
-                    <optgroup label="Switzerland">
-                        <option value="switzerland-alps">Swiss Alps Adventure</option>
-                        <option value="switzerland-scenic">Switzerland Scenic Escape</option>
-                    </optgroup>
-
-                    <optgroup label="Paris">
-                        <option value="paris-romantic">Paris Romantic Getaway</option>
-                        <option value="paris-highlights">Paris City Highlights</option>
-                    </optgroup>
-
-                    <optgroup label="Singapore">
-                        <option value="singapore-wonders">Singapore City Wonders</option>
-                        <option value="singapore-family">Singapore Family Fun</option>
-                    </optgroup>
-
-                    <optgroup label="Malaysia">
-                        <option value="malaysia-kl">Kuala Lumpur City Tour</option>
-                        <option value="malaysia-langkawi">Langkawi Island Retreat</option>
-                    </optgroup>
-
-                </select>
-            </div>
-
-
-            <h3 class="form-section-heading">Personal Details</h3>
-
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                </div>
-
-            </div>
-
-            <div class="form-row" style="margin-top:28px;">
-
-                <div class="form-group">
-                    <label for="contact">Contact Number</label>
-                    <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="traveldate">Preferred Travel Date</label>
-                    <input type="date" id="traveldate" name="traveldate" required>
-                </div>
-
-            </div>
-
-            <div class="form-row" style="margin-top:28px;">
-
-                <div class="form-group">
-                    <label for="age">Age (Optional)</label>
-                    <input type="number" id="age" name="age" min="1" placeholder="e.g. 28">
-                </div>
-
-                <div class="form-group">
-                    <label for="adults">Number of Travellers - Adults</label>
-                    <input type="number" id="adults" name="adults" min="1" placeholder="e.g. 2" required>
-                </div>
-
-            </div>
-
-            <div class="form-row" style="margin-top:28px;">
-
-                <div class="form-group">
-                    <label for="children">Number of Travellers - Children</label>
-                    <input type="number" id="children" name="children" min="0" placeholder="e.g. 0" required>
-                </div>
-
-            </div>
-
-
-            <div class="customize-box">
-
-                <div class="checkbox-item">
-                    <input type="checkbox" id="customize" name="customize">
-                    <label for="customize">I want to customize my own trip</label>
-                </div>
-
-                <p class="form-note">
-                    Select all the countries you would like to visit.
-                    For trips covering multiple countries, our customer
-                    service team will contact you directly to discuss
-                    and finalize your plan.
-                </p>
-
-                <div class="country-checkbox-grid">
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-maldives" name="custom_country" value="maldives">
-                        <label for="c-maldives">Maldives</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-dubai" name="custom_country" value="dubai">
-                        <label for="c-dubai">Dubai</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-bali" name="custom_country" value="bali">
-                        <label for="c-bali">Bali</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-thailand" name="custom_country" value="thailand">
-                        <label for="c-thailand">Thailand</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-switzerland" name="custom_country" value="switzerland">
-                        <label for="c-switzerland">Switzerland</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-paris" name="custom_country" value="paris">
-                        <label for="c-paris">Paris</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-singapore" name="custom_country" value="singapore">
-                        <label for="c-singapore">Singapore</label>
-                    </div>
-
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="c-malaysia" name="custom_country" value="malaysia">
-                        <label for="c-malaysia">Malaysia</label>
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-                    <label for="activities">Extra Activities / Special Requests</label>
-                    <textarea id="activities" name="activities" placeholder="Tell us about any extra activities or special requests for your custom trip..."></textarea>
-                </div>
-
-            </div>
-
-
-            <h3 class="form-section-heading">Travel Preferences</h3>
-
-            <p class="form-note">
-                A local guide is already included as part of most
-                packages. Check the box below only if you would like
-                to arrange a dedicated personal guide just for your
-                group.
-            </p>
-
-            <div class="checkbox-group">
-
-                <div class="checkbox-item">
-                    <input type="checkbox" id="insurance" name="preferences" value="insurance">
-                    <label for="insurance">Travel Insurance Required</label>
-                </div>
-
-                <div class="checkbox-item">
-                    <input type="checkbox" id="personalguide" name="preferences" value="personalguide">
-                    <label for="personalguide">Need a Personal Guide</label>
-                </div>
-
-            </div>
-
-            <h3 class="form-section-heading">Purpose of Inquiry</h3>
-
-            <div class="form-group">
-                <label for="purpose">What is the purpose of your inquiry?</label>
-                <select id="purpose" name="purpose">
-                    <option value="">-- Select an Option --</option>
-                    <option value="new">New Package Booking</option>
-                    <option value="modify">Modify Existing Booking</option>
-                    <option value="cancel">Cancellation Request</option>
-                    <option value="general">General Travel Inquiry</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-
-
-            <div class="form-buttons">
-                <button type="reset" class="btn-reset">Reset</button>
-                <a href="#thankyou" class="btn-submit btn-submit-link">Submit</a>
-            </div>
-
-        </form>
-
-        <div class="thankyou-message" id="thankyou">
-            <a href="#" class="thankyou-close">✕</a>
-            <h3>✅ Your Request Has Been Submitted!</h3>
-            <p>
-                Thank you for reaching out to ENIX Travels. Our customer
-                service team will get in touch with you soon to discuss
-                your travel plans.
+            <h1 class="animate-item hero-title">Booking & Contact</h1>
+            <p class="animate-item hero-sub">
+                Ready to start your journey? Fill in the booking inquiry form below or reach out to our travel specialist team directly.
             </p>
         </div>
-
     </section>
 
-    <footer>
+    <!-- ==========================================
+      3. CONTACT DETAILS SECTION
+    ========================================== -->
+    <section class="contact-wrapper" style="padding-top: 80px; padding-bottom: 40px; background-color: var(--bg-dark);">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Reach us through your preferred channel. Our offices are open Monday to Saturday, 9:00 AM to 6:00 PM.</p>
+        </div>
 
-        <div class="footer-column">
+        <div class="info-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; flex-direction: row; margin-bottom: 60px;">
+            <!-- Phone -->
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div class="info-details">
+                    <h4>Hotline</h4>
+                    <p>+94 70 788 9923</p>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <div class="info-details">
+                    <h4>Inquiries Email</h4>
+                    <p>enixtravels2@gmail.com</p>
+                </div>
+            </div>
+            <!-- Address -->
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div class="info-details">
+                    <h4>Colombo HQ</h4>
+                    <p>Colombo 03, Jaya Road</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="footer-logo">
-                <img src="images/enix.jpeg" alt="ENIX Travels Logo">
+    <!-- ==========================================
+      4. BOOKING INQUIRY FORM SECTION
+    ========================================== -->
+    <section class="contact-wrapper" style="padding-top: 40px; background-color: var(--primary);">
+        <div class="section-header" style="margin-bottom: 40px;">
+            <h2>Booking Inquiry Form</h2>
+            <p>Submit your preferred packages and details, and our concierges will follow up with custom pricing and travel dates.</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <!-- CSS Target alerts indicating package selection from the Packages page -->
+            <div class="selected-note" id="book-mld-01"><p>✓ You selected: <strong>Maldives Escape</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-mld-02"><p>✓ You selected: <strong>Maldives Honeymoon Bliss</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-dxb-01"><p>✓ You selected: <strong>Dubai Luxury Trip</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-dxb-02"><p>✓ You selected: <strong>Dubai City Explorer</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-bal-01"><p>✓ You selected: <strong>Bali Tropical Getaway</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-bal-02"><p>✓ You selected: <strong>Bali Adventure</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-tha-01"><p>✓ You selected: <strong>Bangkok & Pattaya Tour</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-tha-02"><p>✓ You selected: <strong>Phuket Island Escape</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-swz-01"><p>✓ You selected: <strong>Swiss Alps Adventure</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-swz-02"><p>✓ You selected: <strong>Switzerland Scenic Escape</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-par-01"><p>✓ You selected: <strong>Paris Romantic Getaway</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-par-02"><p>✓ You selected: <strong>Paris City Highlights</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-sin-01"><p>✓ You selected: <strong>Singapore City Wonders</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-sin-02"><p>✓ You selected: <strong>Singapore Family Fun</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-mys-01"><p>✓ You selected: <strong>Kuala Lumpur City Tour</strong> — please confirm your details in the form below.</p></div>
+            <div class="selected-note" id="book-mys-02"><p>✓ You selected: <strong>Langkawi Island Retreat</strong> — please confirm your details in the form below.</p></div>
+
+            <!-- Contact/Booking form -->
+            <div class="contact-form-panel glass-panel" style="margin-bottom: 80px;">
+                <form action="#" method="POST" onsubmit="return false;">
+                    
+                    <h3 class="form-section-heading" style="font-size: 1.4rem; color: var(--accent); margin-bottom: 24px; border-bottom: 1px solid var(--border-light); padding-bottom: 8px;">1. Destination & Package</h3>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label for="package">Select Country & Package</label>
+                        <select id="package" name="package" class="form-input" required>
+                            <option value="">-- Choose a Curated Travel Package --</option>
+                            <optgroup label="Maldives">
+                                <option value="maldives-escape">Maldives Escape</option>
+                                <option value="maldives-honeymoon">Maldives Honeymoon Bliss</option>
+                            </optgroup>
+                            <optgroup label="Dubai">
+                                <option value="dubai-luxury">Dubai Luxury Trip</option>
+                                <option value="dubai-explorer">Dubai City Explorer</option>
+                            </optgroup>
+                            <optgroup label="Bali">
+                                <option value="bali-tropical">Bali Tropical Getaway</option>
+                                <option value="bali-adventure">Bali Adventure Package</option>
+                            </optgroup>
+                            <optgroup label="Thailand">
+                                <option value="thailand-bangkok">Bangkok & Pattaya Tour</option>
+                                <option value="thailand-phuket">Phuket Island Escape</option>
+                            </optgroup>
+                            <optgroup label="Switzerland">
+                                <option value="switzerland-alps">Swiss Alps Adventure</option>
+                                <option value="switzerland-scenic">Switzerland Scenic Escape</option>
+                            </optgroup>
+                            <optgroup label="Paris">
+                                <option value="paris-romantic">Paris Romantic Getaway</option>
+                                <option value="paris-highlights">Paris City Highlights</option>
+                            </optgroup>
+                            <optgroup label="Singapore">
+                                <option value="singapore-wonders">Singapore City Wonders</option>
+                                <option value="singapore-family">Singapore Family Fun</option>
+                            </optgroup>
+                            <optgroup label="Malaysia">
+                                <option value="malaysia-kl">Kuala Lumpur City Tour</option>
+                                <option value="malaysia-langkawi">Langkawi Island Retreat</option>
+                            </optgroup>
+                            <optgroup label="Custom Plan">
+                                <option value="custom">I want to customize my own package</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <h3 class="form-section-heading" style="font-size: 1.4rem; color: var(--accent); margin-bottom: 24px; border-bottom: 1px solid var(--border-light); padding-bottom: 8px;">2. Personal Details</h3>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="name@domain.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="contact-phone">Phone / WhatsApp Number</label>
+                            <input type="tel" id="contact-phone" name="contact" class="form-input" placeholder="e.g. +94 70 123 4567" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travel-date">Preferred Departure Date</label>
+                            <input type="date" id="travel-date" name="date" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <h3 class="form-section-heading" style="font-size: 1.4rem; color: var(--accent); margin-bottom: 24px; border-bottom: 1px solid var(--border-light); padding-bottom: 8px;">3. Trip Specifics & Customizations</h3>
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="guests">Number of Travelers</label>
+                            <input type="number" id="guests" name="guests" class="form-input" min="1" max="100" placeholder="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Requested Stay Duration</label>
+                            <input type="text" id="duration" name="duration" class="form-input" placeholder="e.g., 5 Days / 4 Nights">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special-requests">Describe Your Custom Plan / Special Requests</label>
+                        <textarea id="special-requests" name="activities" class="form-input" placeholder="Specify any flight preferences, dietary needs, hotel tier modifications, or budget targets..."></textarea>
+                    </div>
+
+                    <button type="submit" class="glow-btn form-submit-btn">Submit Booking Request</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Column Areas -->
+        <footer class="footer-bottom">
+            <div class="footer-brand">
                 <h3>ENIX Travels</h3>
+                <p>Redefining luxury travel and custom explorations. Experience personalized itineraries designed with absolute attention to detail.</p>
             </div>
-
-            <p>Explore the world with confidence.</p>
-
-            <div class="social-links">
-                <a href="#">📘 Facebook</a>
-                <a href="#">📷 Instagram</a>
-                <a href="#">💬 WhatsApp</a>
-                <a href="#">𝕏 Twitter</a>
-                <a href="#">▶ YouTube</a>
+            <div class="footer-links-grid">
+                <div class="footer-nav">
+                    <h4>Navigate</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="traveltips.html">Travel Tips</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-support">
+                    <h4>Emergency Help</h4>
+                    <p>24/7 Global Travel Support Helpline for active bookings.</p>
+                    <span class="helpline">+94 76 911 0000</span>
+                </div>
             </div>
+        </footer>
 
+        <div class="copyright">
+            <p>© 2026 ENIX Travels. All Rights Reserved.</p>
+            <p>Designed with luxury aesthetic and pure CSS micro-interactions.</p>
         </div>
-
-        <div class="footer-column">
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="destinations.html">Destinations and Gallery</a>
-            <a href="packages.html">Packages</a>
-            <a href="traveltips.html">Travel Tips</a>
-            <a href="contact.html">Contact Us</a>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Contact Us</h3>
-
-            <p>+94 70 788 9923</p>
-            <p>enixtravels2@gmail.com</p>
-            <p>Colombo 03, Jaya Road</p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Emergency Helpline</h3>
-
-            <p>24/7 Travel Emergency Support</p>
-            <p class="helpline-number">+94 76 911 0000</p>
-
-        </div>
-
-    </footer>
-
-    <div class="copyright">
-
-        © 2026 ENIX Travels. All Rights Reserved.
-
-    </div>
+    </section>
 
 </body>
-
 </html>
