@@ -2279,3 +2279,229 @@ textarea.form-input {
   }
 }
 
+/*
+============================================================
+  ENIX TRAVELS - INTERACTIVE & MOTION DESIGN ENGINE STYLES
+============================================================
+*/
+
+/* Custom Scroll Progress Bar (Top) */
+.enix-scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, #ffffff 50%, var(--accent) 100%);
+  box-shadow: 0 0 10px var(--accent-glow);
+  z-index: 10000;
+  width: 0%;
+  transition: width 0.1s ease-out;
+  pointer-events: none;
+}
+
+/* Custom Cursor Glow (Desktop only) */
+.enix-cursor-glow {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(197, 168, 128, 0.04) 0%, rgba(127, 205, 255, 0.02) 40%, transparent 70%);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+/* Ripple Click Effect */
+.enix-ripple {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: rgba(197, 168, 128, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10001;
+  animation: enix-ripple-anim 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes enix-ripple-anim {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* Noise & Aurora Background Overlays */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9998;
+  opacity: 0.012;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Animated Floating Aurora Gradient Blobs */
+body::after {
+  content: '';
+  position: fixed;
+  top: 15%;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--ocean-glow-2) 0%, transparent 70%);
+  z-index: -2;
+  pointer-events: none;
+  animation: float-aurora-1 25s infinite ease-in-out alternate;
+  filter: blur(80px);
+}
+
+.aurora-bg-secondary {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  z-index: -2;
+  pointer-events: none;
+  animation: float-aurora-2 20s infinite ease-in-out alternate;
+  filter: blur(80px);
+}
+
+@keyframes float-aurora-1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(15vw, -10vh) scale(1.15); }
+  100% { transform: translate(-5vw, 15vh) scale(0.9); }
+}
+
+@keyframes float-aurora-2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10vw, 10vh) scale(1.2); }
+  100% { transform: translate(5vw, -5vh) scale(0.95); }
+}
+
+/* Scroll-Triggered Reveal Classes */
+.reveal-prep {
+  opacity: 0 !important;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-prep.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1);
+}
+
+/* 1. Page Loader Styles */
+.enix-loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.enix-loader-container.fade-out {
+  opacity: 0;
+  transform: translateY(-50px);
+  pointer-events: none;
+}
+
+.enix-loader-content {
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.enix-loader-logo-wrap {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 30px auto;
+}
+
+.enix-loader-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: logo-pulse 2s infinite ease-in-out;
+}
+
+.enix-loader-ring {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--accent);
+  border-bottom-color: var(--accent);
+  animation: spin-loader 1.5s infinite linear;
+}
+
+@keyframes spin-loader {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes logo-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(197, 168, 128, 0.1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(197, 168, 128, 0.4); }
+}
+
+.enix-loader-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #ffffff 30%, var(--accent) 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.enix-loader-progress-track {
+  width: 100%;
+  height: 3px;
+  background-color: var(--border-light);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.enix-loader-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #ffffff 100%);
+  box-shadow: 0 0 8px var(--accent-glow);
+  transition: width 0.1s ease-out;
+}
+
+.enix-loader-percent {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-slate);
+  letter-spacing: 1.5px;
+}
+
