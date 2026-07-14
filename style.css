@@ -2346,14 +2346,18 @@ textarea.form-input {
   }
 
   /* ---- HORIZONTAL SCROLL CAROUSELS ---- */
-  /* Why Choose, Services, Tips, Team, Values, Category, Info-cards */
+  /* Why Choose, Services, Tips, Team, Values, Category, Info-cards, Destinations-grid, Photo-grid, Packages-grid, Country-info-cards-wrapper */
   .why-grid,
   .services-grid,
   .tips-grid,
   .team-grid,
   .values-grid,
   .category-grid,
-  .info-cards {
+  .info-cards,
+  .destinations-grid,
+  .photo-grid,
+  .packages-grid,
+  .country-info-cards-wrapper {
     display: flex !important;
     flex-direction: row !important;
     overflow-x: auto !important;
@@ -2378,7 +2382,11 @@ textarea.form-input {
   .team-grid::-webkit-scrollbar,
   .values-grid::-webkit-scrollbar,
   .category-grid::-webkit-scrollbar,
-  .info-cards::-webkit-scrollbar {
+  .info-cards::-webkit-scrollbar,
+  .destinations-grid::-webkit-scrollbar,
+  .photo-grid::-webkit-scrollbar,
+  .packages-grid::-webkit-scrollbar,
+  .country-info-cards-wrapper::-webkit-scrollbar {
     display: none;
   }
 
@@ -2388,21 +2396,39 @@ textarea.form-input {
   .tip-card,
   .team-card,
   .value-item,
-  .category-box {
-    flex: 0 0 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
+  .category-box,
+  .destination-card,
+  .package-card {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
     scroll-snap-align: start;
     margin: 0 !important;
   }
 
-  /* Info cards slightly wider */
-  .info-card {
-    flex: 0 0 240px !important;
-    min-width: 240px !important;
-    max-width: 240px !important;
+  /* Photo items can be slightly narrower */
+  .photo-item {
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    height: 250px !important;
     scroll-snap-align: start;
     margin: 0 !important;
+  }
+
+  /* Info cards slightly wider for text readability */
+  .country-info-card {
+    flex: 0 0 320px !important;
+    min-width: 320px !important;
+    max-width: 320px !important;
+    scroll-snap-align: start;
+    margin: 0 !important;
+  }
+
+  /* Info card layout on mobile scroll */
+  .country-info-card .info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   /* Trailing spacer to show peeking next card */
@@ -2412,30 +2438,19 @@ textarea.form-input {
   .team-grid::after,
   .values-grid::after,
   .category-grid::after,
-  .info-cards::after {
+  .info-cards::after,
+  .destinations-grid::after,
+  .photo-grid::after,
+  .packages-grid::after,
+  .country-info-cards-wrapper::after {
     content: '';
     flex: 0 0 5%;
     display: block;
   }
 
-  /* ---- DESTINATIONS GRID ---- */
-  .destinations-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
+  /* Destination card height adjust for horizontal display */
   .destination-card {
-    height: 400px;
-  }
-
-  /* ---- GALLERY PHOTO GRID ---- */
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .photo-item {
-    height: 180px;
+    height: 420px !important;
   }
 
   /* Filter tabs wrap */
@@ -2460,20 +2475,9 @@ textarea.form-input {
     font-size: 1.8rem;
   }
 
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
   /* ---- PACKAGES ---- */
   .package-card {
-    max-width: 100%;
-  }
-
-  .packages-grid {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
+    max-width: 100% !important;
   }
 
   .package-header h3 {
@@ -2699,7 +2703,11 @@ textarea.form-input {
   .tip-card,
   .team-card,
   .value-item,
-  .category-box {
+  .category-box,
+  .destination-card,
+  .photo-item,
+  .package-card,
+  .country-info-card {
     flex: 0 0 230px !important;
     min-width: 230px !important;
     max-width: 230px !important;

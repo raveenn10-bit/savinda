@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     init3DTilt();
     initRippleClick();
     initSecondaryAurora();
+    initStatsCounter();
+    initMobileAutoScroll();
 });
 
 /**
@@ -265,4 +267,126 @@ function initSecondaryAurora() {
     aurora.id = 'enix-aurora-secondary';
     aurora.className = 'aurora-bg-secondary';
     document.body.appendChild(aurora);
+}
+
+/**
+ * 9. Animated Stats Counter
+ */
+function initStatsCounter() {
+    const stats = document.querySelectorAll('.stat-number');
+    if (stats.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const targetEl = entry.target;
+                if (targetEl.dataset.animated === 'true') return;
+                
+                targetEl.dataset.animated = 'true';
+                const originalText = targetEl.textContent.trim();
+                
+                // Parse number and suffix (like "50+", "10K+", "99%")
+                const numberMatch = originalText.match(/^([0-9]+)(.*)$/);
+                if (!numberMatch) return;
+                
+                const targetNumber = parseInt(numberMatch[1], 10);
+                const suffix = numberMatch[2] || '';
+                
+                let startTimestamp = null;
+                const duration = 1500; // 1.5 seconds
+
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const currentValue = Math.floor(progress * targetNumber);
+                    
+                    targetEl.textContent = currentValue + suffix;
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        targetEl.textContent = originalText; // Ensure exact end state
+                    }
+                };
+                
+                window.requestAnimationFrame(step);
+                observer.unobserve(targetEl);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    stats.forEach(stat => observer.observe(stat));
+}
+
+/**
+ * 10. Mobile Auto Scroll Carousel
+ */
+function initMobileAutoScroll() {
+    // Only target screens that are mobile or tablet width
+    if (window.innerWidth > 768) return;
+
+    const selectors = [
+        '.why-grid',
+        '.services-grid',
+        '.tips-grid',
+        '.team-grid',
+        '.values-grid',
+        '.category-grid',
+        '.info-cards',
+        '.destinations-grid',
+        '.photo-grid',
+        '.packages-grid',
+        '.country-info-cards-wrapper'
+    ];
+
+    selectors.forEach(selector => {
+        const container = document.querySelector(selector);
+        if (!container) return;
+
+        let isInteracting = false;
+        let resumeTimeout = null;
+        let speed = 0.5; // slow scroll speed (px per frame)
+        let animationFrameId = null;
+
+        const scrollLoop = () => {
+            if (!isInteracting) {
+                container.scrollLeft += speed;
+                
+                // If it reaches the end, reset to 0
+                const maxScrollLeft = container.scrollWidth - container.clientWidth;
+                if (container.scrollLeft >= maxScrollLeft - 1) {
+                    container.scrollLeft = 0;
+                }
+            }
+            animationFrameId = requestAnimationFrame(scrollLoop);
+        };
+
+        const startInteraction = () => {
+            isInteracting = true;
+            if (resumeTimeout) clearTimeout(resumeTimeout);
+        };
+
+        const endInteraction = () => {
+            if (resumeTimeout) clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => {
+                isInteracting = false;
+            }, 3000); // Resume auto-scrolling after 3 seconds of inactivity
+        };
+
+        // Event listeners to pause on touch/swipe/drag
+        container.addEventListener('touchstart', startInteraction, { passive: true });
+        container.addEventListener('touchend', endInteraction, { passive: true });
+        container.addEventListener('touchcancel', endInteraction, { passive: true });
+        
+        container.addEventListener('mousedown', startInteraction);
+        container.addEventListener('mouseup', endInteraction);
+        container.addEventListener('mouseleave', endInteraction);
+        container.addEventListener('wheel', () => {
+            startInteraction();
+            endInteraction();
+        }, { passive: true });
+
+        // Start loop
+        animationFrameId = requestAnimationFrame(scrollLoop);
+    });
 }
