@@ -1095,18 +1095,33 @@ input[name="gallery-filter"] {
 
 /* Photo Grid */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex !important;
+  flex-direction: row !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  scroll-snap-type: x mandatory;
   gap: 20px;
   width: 100%;
+  padding: 10px 0 24px 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   transition: var(--transition-smooth);
+}
+.photo-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .photo-item {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 250px;
+  height: 280px;
+  flex: 0 0 320px !important;
+  min-width: 320px !important;
+  max-width: 320px !important;
+  scroll-snap-align: start;
   border: 1px solid var(--border-light);
   box-shadow: var(--card-shadow);
   transition: var(--transition-smooth);

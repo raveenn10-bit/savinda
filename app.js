@@ -319,12 +319,9 @@ function initStatsCounter() {
 }
 
 /**
- * 10. Mobile Auto Scroll Carousel
+ * 10. Mobile Auto Scroll Carousel & Universal Photo Gallery Scroller
  */
 function initMobileAutoScroll() {
-    // Only target screens that are mobile or tablet width
-    if (window.innerWidth > 768) return;
-
     const selectors = [
         '.why-grid',
         '.services-grid',
@@ -340,6 +337,9 @@ function initMobileAutoScroll() {
     ];
 
     selectors.forEach(selector => {
+        // Skip mobile-only carousels on desktop, but allow photo-grid to scroll universally
+        if (selector !== '.photo-grid' && window.innerWidth > 768) return;
+
         const container = document.querySelector(selector);
         if (!container) return;
 
