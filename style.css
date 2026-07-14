@@ -1410,8 +1410,9 @@ input[name="gallery-filter"] {
 }
 
 .packages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Columns on desktop */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -1423,6 +1424,8 @@ input[name="gallery-filter"] {
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 420px;
+  width: 100%;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -1444,13 +1447,13 @@ input[name="gallery-filter"] {
 
 .package-header h3 {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 12px;
 }
 
 .package-duration {
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--accent);
@@ -1470,9 +1473,9 @@ input[name="gallery-filter"] {
 
 .details-list li {
   position: relative;
-  padding-left: 32px;
-  margin-bottom: 16px;
-  font-size: 0.98rem;
+  padding-left: 36px;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
   color: var(--text-slate);
   font-weight: 300;
 }
@@ -1481,7 +1484,7 @@ input[name="gallery-filter"] {
   content: '';
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 6px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -1495,7 +1498,7 @@ input[name="gallery-filter"] {
   content: '';
   position: absolute;
   left: 6px;
-  top: 8px;
+  top: 10px;
   width: 5px;
   height: 8px;
   border: solid var(--accent);
@@ -1521,7 +1524,7 @@ input[name="gallery-filter"] {
 }
 
 .price-label {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-slate);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -1529,20 +1532,20 @@ input[name="gallery-filter"] {
 
 .price-amount {
   font-family: var(--font-serif);
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   color: var(--text-white);
   font-weight: 700;
   margin: 5px 0 20px 0;
 }
 
 .price-amount span {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--accent);
 }
 
 .package-btn {
   width: 100%;
-  padding: 16px;
+  padding: 18px;
   text-align: center;
 }
 
@@ -2073,7 +2076,6 @@ textarea.form-input {
     grid-template-columns: repeat(2, 1fr);
   }
   .packages-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
   .contact-grid {
@@ -2173,8 +2175,7 @@ textarea.form-input {
   }
   
   .destinations-grid,
-  .photo-grid,
-  .packages-grid {
+  .photo-grid {
     grid-template-columns: 1fr;
   }
   
