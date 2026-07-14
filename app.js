@@ -4,7 +4,16 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initLoader();
+    // Only run preloader on the home page (which contains the main .hero class)
+    const isHomePage = document.querySelector('.hero') !== null || window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+    if (isHomePage) {
+        initLoader();
+    } else {
+        // Immediately reveal headers on subpages without loader delay
+        document.querySelectorAll('.hero-title, .hero-sub, .hero-content .glow-btn').forEach(el => {
+            el.classList.add('revealed');
+        });
+    }
     initScrollProgress();
     initCursorGlow();
     initScrollReveals();
