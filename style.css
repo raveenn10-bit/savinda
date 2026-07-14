@@ -1,40 +1,51 @@
 /*
  ==========================================
    ENIX TRAVELS - PREMIUM STYLE SHEET
-   Techniques: CSS Grid, Flexbox, Glassmorphism, Checkbox Hack
-   Theme: Luxury Navy & Sand Gold
+   Techniques: CSS Grid, Flexbox, Glassmorphism, Checkbox Hack, 
+               Scroll-Driven Animations, Pure CSS Gallery & Lightbox
+   Theme: Luxury Navy & Sand Gold with Ocean Breeze Aurora Ambient Glows
  ==========================================
 */
 
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@200;300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
 
 /* --- Design Tokens & Variables --- */
 :root {
   /* Colors */
-  --primary: #050e1a;          /* Deep rich navy base */
+  --primary: #030c17;          /* Primary deep navy base */
   --primary-light: #0d1b2a;    /* Secondary navy for cards */
   --accent: #c5a880;           /* Champagne / Sand Gold */
   --accent-glow: rgba(197, 168, 128, 0.4);
   --accent-hover: #e0cca7;     /* Lighter Sand Gold */
   --bg-dark: #02070f;          /* Almost black */
+  
+  /* Ocean Breeze Color Palette (customized background blends) */
+  --ocean-light: #DFF7FF;      /* Light pastel sky blue */
+  --ocean-medium: #7FCDFF;     /* Vibrant sky blue */
+  --ocean-deep: #4DA8FF;       /* Medium blue accent */
+  --ocean-glow-1: rgba(223, 247, 255, 0.07);
+  --ocean-glow-2: rgba(127, 205, 255, 0.05);
+  --ocean-glow-3: rgba(77, 168, 255, 0.03);
+  
   --text-white: #ffffff;       /* Pure white headings */
   --text-slate: #94a3b8;       /* Legible slate body */
   --text-light: #e2e8f0;       /* High contrast body text */
   --border-light: rgba(255, 255, 255, 0.08); /* Semi-transparent border */
   
-  /* Fonts */
-  --font-serif: 'Cormorant Garamond', serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  /* Professional Designer Fonts */
+  --font-serif: 'Cinzel', serif;
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Outfit', sans-serif;
   
   /* Animation / Transitions */
   --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1); /* Premium ease-out curve */
   --transition-fast: all 0.25s ease;
   
   /* Shadow & Blur */
-  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --card-shadow-hover: 0 20px 40px -10px rgba(197, 168, 128, 0.15);
-  --glass-bg: rgba(5, 14, 26, 0.7);
+  --card-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.7);
+  --card-shadow-hover: 0 20px 40px -10px rgba(127, 205, 255, 0.15); /* Sky blue glow */
+  --glass-bg: rgba(3, 12, 23, 0.7);
   --glass-blur: blur(15px);
 }
 
@@ -53,6 +64,13 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-dark);
+  /* Aurora Ambient Gradient Glows mixing Ocean Breeze palette in background */
+  background-image: 
+    radial-gradient(circle at 80% 20%, var(--ocean-glow-1) 0%, transparent 40%),
+    radial-gradient(circle at 10% 60%, var(--ocean-glow-2) 0%, transparent 45%),
+    radial-gradient(circle at 50% 30%, var(--ocean-glow-3) 0%, transparent 50%),
+    radial-gradient(circle at 95% 85%, var(--ocean-glow-1) 0%, transparent 35%);
+  background-attachment: fixed; /* Keeps glow gradients fixed in screen coords during scroll */
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
@@ -100,24 +118,25 @@ img {
 /* --- Common UI Utilities --- */
 .section-header {
   text-align: center;
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto 60px auto;
 }
 
 .section-header h2 {
   font-size: 3rem;
-  line-height: 1.2;
+  line-height: 1.25;
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
+  font-weight: 700;
 }
 
 .section-header h2::after {
   content: '';
   display: block;
-  width: 50px;
+  width: 60px;
   height: 2px;
-  background-color: var(--accent);
+  background: linear-gradient(90deg, transparent, var(--accent) 50%, transparent);
   margin: 15px auto 0 auto;
 }
 
@@ -193,6 +212,7 @@ img {
 }
 
 .logo-section h2 {
+  font-family: var(--font-serif);
   font-size: 1.6rem;
   letter-spacing: 1px;
   background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
@@ -250,7 +270,7 @@ img {
 .hero {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(180deg, rgba(5,14,26,0.3) 0%, rgba(2,7,15,0.95) 100%), 
+  background: linear-gradient(180deg, rgba(3,12,23,0.2) 0%, rgba(2,7,15,0.95) 100%), 
               url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -297,7 +317,7 @@ img {
 
 /* --- Sub-page Hero Section --- */
 .sub-hero {
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -317,7 +337,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(5,14,26,0.5) 0%, rgba(2,7,15,1) 100%);
+  background: linear-gradient(180deg, rgba(3,12,23,0.4) 0%, rgba(2,7,15,1) 100%);
   z-index: 1;
 }
 
@@ -342,7 +362,8 @@ img {
 }
 
 .sub-hero h1 {
-  font-size: 4rem;
+  font-family: var(--font-serif);
+  font-size: 3.8rem;
   margin-bottom: 16px;
   z-index: 10;
   font-weight: 700;
@@ -350,7 +371,7 @@ img {
 }
 
 .sub-hero p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--text-light);
   max-width: 700px;
   margin: 0 auto;
@@ -362,7 +383,7 @@ img {
 .animate-item {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero-title {
@@ -412,7 +433,7 @@ img {
 /* --- About Us Page Layouts --- */
 .about {
   padding: 120px 8%;
-  background-color: var(--bg-dark);
+  background-color: transparent;
   position: relative;
 }
 
@@ -424,12 +445,13 @@ img {
 }
 
 .about-text h3 {
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 12px;
-  font-family: var(--font-sans);
+  font-weight: 700;
 }
 
 .about-text h2 {
@@ -480,10 +502,12 @@ img {
 }
 
 .stat-label {
-  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-slate);
+  font-weight: 600;
 }
 
 /* Visual Collage side */
@@ -515,7 +539,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(360deg, rgba(5,14,26,0.6) 0%, rgba(5,14,26,0) 100%);
+  background: linear-gradient(360deg, rgba(3,12,23,0.6) 0%, rgba(3,12,23,0) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -545,7 +569,7 @@ img {
 /* Why Choose Grid */
 .why-choose {
   padding: 120px 8%;
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .why-grid {
@@ -565,11 +589,12 @@ img {
 
 .why-box:hover {
   transform: translateY(-5px);
-  border-color: rgba(197, 168, 128, 0.4);
+  border-color: var(--ocean-medium);
   box-shadow: var(--card-shadow-hover);
 }
 
 .why-box h3 {
+  font-family: var(--font-serif);
   font-size: 1.6rem;
   color: var(--text-white);
   margin-bottom: 12px;
@@ -588,7 +613,7 @@ img {
 /* History / Values section */
 .agency-profile {
   padding: 120px 8%;
-  background-color: var(--bg-dark);
+  background-color: transparent;
 }
 
 .profile-block {
@@ -596,6 +621,7 @@ img {
 }
 
 .profile-block h3 {
+  font-family: var(--font-serif);
   font-size: 2.2rem;
   margin-bottom: 30px;
   border-bottom: 1px solid var(--border-light);
@@ -617,6 +643,7 @@ img {
 }
 
 .vm-box h3 {
+  font-family: var(--font-serif);
   font-size: 2rem;
   margin-bottom: 8px;
   color: var(--accent);
@@ -657,7 +684,7 @@ img {
 }
 
 .value-item h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 1.25rem;
   color: var(--accent);
   margin-bottom: 12px;
@@ -691,7 +718,7 @@ img {
 }
 
 .team-card h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 1.15rem;
   color: var(--accent);
   margin-bottom: 15px;
@@ -743,7 +770,7 @@ img {
 /* Services section in About page */
 .services {
   padding: 120px 8%;
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .services-grid {
@@ -767,12 +794,14 @@ img {
 }
 
 .service-card h3 {
+  font-family: var(--font-serif);
   font-size: 1.4rem;
   color: var(--text-white);
   margin-bottom: 12px;
 }
 
 .service-card p {
+  font-family: var(--font-display);
   color: var(--accent);
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -783,8 +812,7 @@ img {
 /* --- Destinations Page Layouts --- */
 .destinations {
   padding: 120px 8%;
-  background-color: var(--primary);
-  background-image: radial-gradient(circle at 10% 20%, rgba(13, 27, 42, 0.2) 0%, transparent 40%);
+  background-color: transparent;
 }
 
 .destinations-grid {
@@ -827,7 +855,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(5,14,26,0) 40%, rgba(5,14,26,0.85) 100%);
+  background: linear-gradient(to bottom, rgba(3,12,23,0) 40%, rgba(3,12,23,0.85) 100%);
   z-index: 1;
   transition: var(--transition-smooth);
 }
@@ -839,14 +867,14 @@ img {
 .destination-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--card-shadow-hover);
-  border-color: rgba(197, 168, 128, 0.3);
+  border-color: var(--ocean-medium);
 }
 
 .dest-badge {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: rgba(5, 14, 26, 0.7);
+  background-color: rgba(3, 12, 23, 0.7);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1.5px solid var(--accent);
@@ -858,6 +886,7 @@ img {
   border-radius: 20px;
   z-index: 2;
   font-weight: 600;
+  font-family: var(--font-display);
 }
 
 .dest-content {
@@ -903,6 +932,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: var(--font-display);
 }
 
 .dest-link span {
@@ -913,10 +943,268 @@ img {
   transform: translateX(5px);
 }
 
+/* --- Interactive Pure CSS Photo Gallery Section --- */
+.gallery-filter-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Hide radio buttons */
+input[name="gallery-filter"] {
+  display: none;
+}
+
+/* Filter Tab Pills */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-light);
+  padding: 8px;
+  border-radius: 40px;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.filter-tab {
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  color: var(--text-slate);
+  transition: var(--transition-fast);
+}
+
+.filter-tab:hover {
+  color: var(--text-white);
+}
+
+/* Radio check logic to highlight tabs */
+#filter-all:checked ~ .filter-tabs label[for="filter-all"],
+#filter-maldives:checked ~ .filter-tabs label[for="filter-maldives"],
+#filter-dubai:checked ~ .filter-tabs label[for="filter-dubai"],
+#filter-bali:checked ~ .filter-tabs label[for="filter-bali"],
+#filter-thailand:checked ~ .filter-tabs label[for="filter-thailand"],
+#filter-switzerland:checked ~ .filter-tabs label[for="filter-switzerland"],
+#filter-paris:checked ~ .filter-tabs label[for="filter-paris"],
+#filter-singapore:checked ~ .filter-tabs label[for="filter-singapore"],
+#filter-malaysia:checked ~ .filter-tabs label[for="filter-malaysia"] {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  border-color: var(--accent);
+  box-shadow: 0 4px 15px -3px var(--accent-glow);
+}
+
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  transition: var(--transition-smooth);
+}
+
+.photo-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 250px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+  cursor: zoom-in;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(3,12,23,0.9) 0%, rgba(3,12,23,0) 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition-smooth);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 5;
+}
+
+.photo-overlay h4 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-white);
+  margin-bottom: 2px;
+}
+
+.photo-overlay p {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.photo-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--ocean-medium);
+  box-shadow: 0 10px 25px -5px rgba(127, 205, 255, 0.2);
+}
+
+.photo-item:hover img {
+  transform: scale(1.06);
+}
+
+.photo-item:hover .photo-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide non-selected filter items */
+#filter-maldives:checked ~ .photo-grid .photo-item:not(.item-maldives),
+#filter-dubai:checked ~ .photo-grid .photo-item:not(.item-dubai),
+#filter-bali:checked ~ .photo-grid .photo-item:not(.item-bali),
+#filter-thailand:checked ~ .photo-grid .photo-item:not(.item-thailand),
+#filter-switzerland:checked ~ .photo-grid .photo-item:not(.item-switzerland),
+#filter-paris:checked ~ .photo-grid .photo-item:not(.item-paris),
+#filter-singapore:checked ~ .photo-grid .photo-item:not(.item-singapore),
+#filter-malaysia:checked ~ .photo-grid .photo-item:not(.item-malaysia) {
+  display: none;
+}
+
+/* --- Pure CSS Lightbox Overlays --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(3, 12, 23, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-close-helper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-out;
+  z-index: 2010;
+}
+
+.lightbox-content-box {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  z-index: 2020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: zoomInLight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-content-box img {
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 25px 60px -10px rgba(0,0,0,0.8);
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.lightbox-title-box {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.lightbox-title-box h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--text-white);
+}
+
+.lightbox-title-box p {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.btn-close-lightbox {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-light);
+  color: var(--text-light);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-close-lightbox:hover {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  border-color: var(--accent);
+}
+
+@keyframes zoomInLight {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Tour Categories Grid */
 .categories-section {
   padding: 120px 8%;
-  background-color: var(--bg-dark);
+  background-color: transparent;
 }
 
 .category-grid {
@@ -940,6 +1228,7 @@ img {
 }
 
 .category-box h3 {
+  font-family: var(--font-serif);
   font-size: 1.6rem;
   margin-bottom: 15px;
 }
@@ -976,7 +1265,7 @@ img {
 /* Country Know before you go cards */
 .country-info-section {
   padding: 120px 8%;
-  background-color: var(--bg-dark);
+  background-color: transparent;
 }
 
 .country-info-card {
@@ -989,6 +1278,7 @@ img {
 }
 
 .country-info-card h3 {
+  font-family: var(--font-serif);
   font-size: 2.5rem;
   color: var(--accent);
   margin-bottom: 24px;
@@ -1021,7 +1311,7 @@ img {
 /* --- Tour Packages Page Layouts --- */
 .packages {
   padding: 120px 8%;
-  background-color: var(--bg-dark);
+  background-color: transparent;
   position: relative;
 }
 
@@ -1056,12 +1346,14 @@ img {
 }
 
 .package-header h3 {
+  font-family: var(--font-serif);
   font-size: 1.8rem;
   margin-bottom: 12px;
 }
 
 .package-duration {
-  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--accent);
@@ -1135,6 +1427,7 @@ img {
 }
 
 .country-title {
+  font-family: var(--font-serif);
   font-size: 3rem;
   color: var(--accent);
   margin-bottom: 40px;
@@ -1145,7 +1438,7 @@ img {
 /* Tour packages Table style */
 .table-section {
   padding: 120px 8%;
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .table-wrapper {
@@ -1176,13 +1469,14 @@ img {
 
 .tour-table th {
   padding: 20px;
-  background-color: rgba(5, 14, 26, 0.5);
+  background-color: rgba(3, 12, 23, 0.5);
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--accent);
   border-bottom: 1.5px solid var(--border-light);
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: var(--font-display);
 }
 
 .tour-table td {
@@ -1206,7 +1500,7 @@ img {
 /* --- Travel Tips & FAQ Page Layouts --- */
 .tips-section {
   padding: 120px 8%;
-  background-color: var(--bg-dark);
+  background-color: transparent;
 }
 
 .tips-grid {
@@ -1226,11 +1520,12 @@ img {
 
 .tip-card:hover {
   transform: translateY(-5px);
-  border-color: var(--accent);
+  border-color: var(--ocean-medium);
   box-shadow: var(--card-shadow-hover);
 }
 
 .tip-card h3 {
+  font-family: var(--font-serif);
   font-size: 1.6rem;
   margin-bottom: 15px;
 }
@@ -1245,7 +1540,7 @@ img {
 /* FAQ Details/Summary Accordion */
 .faq-section {
   padding: 120px 8%;
-  background-color: var(--primary);
+  background-color: transparent;
 }
 
 .faq-list {
@@ -1311,7 +1606,7 @@ img {
 /* --- Contact & Booking Page Layouts --- */
 .contact-wrapper {
   padding: 120px 8% 60px 8%;
-  background-color: var(--primary);
+  background-color: transparent;
   position: relative;
 }
 
@@ -1359,12 +1654,13 @@ img {
 }
 
 .info-details h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-slate);
   margin-bottom: 4px;
+  font-weight: 600;
 }
 
 .info-details p {
@@ -1429,12 +1725,14 @@ img {
 }
 
 .form-group label {
+  font-family: var(--font-display);
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-slate);
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .form-input {
@@ -1513,6 +1811,7 @@ textarea.form-input {
 }
 
 .footer-brand h3 {
+  font-family: var(--font-serif);
   font-size: 2rem;
   margin-bottom: 15px;
 }
@@ -1538,12 +1837,13 @@ textarea.form-input {
 }
 
 .footer-nav h4, .footer-support h4 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--accent);
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .footer-nav a {
@@ -1582,6 +1882,28 @@ textarea.form-input {
   font-weight: 300;
 }
 
+/* --- Advanced CSS Scroll-Driven Reveal Animations --- */
+@supports (animation-timeline: view()) {
+  /* Reveal cards, grids and blocks as they enter the screen */
+  .why-box, .destination-card, .package-card, .faq-item, 
+  .info-card, .country-info-card, .stat-item, .about-visual, .about-text {
+    animation: revealOnScroll both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 25%;
+  }
+  
+  @keyframes revealOnScroll {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 /* --- Mobile Hamburger Checkbox Hack Logic --- */
 @media (max-width: 992px) {
   .section-header h2 {
@@ -1592,6 +1914,9 @@ textarea.form-input {
     gap: 50px;
   }
   .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .photo-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .packages-grid {
@@ -1646,7 +1971,7 @@ textarea.form-input {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background-color: rgba(5, 14, 26, 0.98);
+    background-color: rgba(3, 12, 23, 0.98);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border-left: 1px solid var(--border-light);
@@ -1695,6 +2020,7 @@ textarea.form-input {
   }
   
   .destinations-grid,
+  .photo-grid,
   .packages-grid {
     grid-template-columns: 1fr;
   }

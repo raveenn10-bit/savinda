@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our destinations guide and visa summary. Get detailed travel, medical, and local guide advice for Maldives, Dubai, Bali, and more.">
+    <meta name="description" content="Explore our immersive travel gallery and filter destinations. Read detailed local guidelines and visa details.">
     <title>Destinations & Gallery | ENIX Travels</title>
     <!-- Link to premium redesign stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -46,18 +46,18 @@
         <div class="hero-content">
             <h1 class="animate-item hero-title">Discover Our Destinations</h1>
             <p class="animate-item hero-sub">
-                Eight unforgettable countries, endless experiences. Explore the gallery, find your category and discover everything you need to know before you go.
+                Eight breathtaking countries, endless explorations. Browse our live travel gallery, filter locations, and read essential details.
             </p>
         </div>
     </section>
 
     <!-- ==========================================
-      3. DESTINATIONS GALLERY (CSS Grid)
+      3. DESTINATIONS PROFILE SECTION
     ========================================== -->
     <section class="destinations">
         <div class="section-header">
-            <h2>Destination Gallery</h2>
-            <p>Explore some of the most beautiful and iconic locations from our worldwide partner network.</p>
+            <h2>Worldwide Destinations</h2>
+            <p>Read quick overviews from our travel specialists outlining the highlights of our partner countries.</p>
         </div>
 
         <div class="destinations-grid">
@@ -184,12 +184,243 @@
     </section>
 
     <!-- ==========================================
-      4. CATEGORIES SECTION
+      4. FILTERABLE PHOTO GALLERY (PURE CSS)
+    ========================================== -->
+    <section class="destinations" style="padding-top: 0; background-color: rgba(255,255,255,0.01);">
+        <div class="section-header" id="gallery">
+            <h2>Interactive Travel Gallery</h2>
+            <p>Filter photos by clicking country tabs below. Click any image to launch the high-fidelity fullscreen lightbox.</p>
+        </div>
+
+        <div class="gallery-filter-container">
+            <!-- Radio Hack Filters -->
+            <input type="radio" id="filter-all" name="gallery-filter" checked>
+            <input type="radio" id="filter-maldives" name="gallery-filter">
+            <input type="radio" id="filter-dubai" name="gallery-filter">
+            <input type="radio" id="filter-bali" name="gallery-filter">
+            <input type="radio" id="filter-thailand" name="gallery-filter">
+            <input type="radio" id="filter-switzerland" name="gallery-filter">
+            <input type="radio" id="filter-paris" name="gallery-filter">
+            <input type="radio" id="filter-singapore" name="gallery-filter">
+            <input type="radio" id="filter-malaysia" name="gallery-filter">
+
+            <!-- Pill Buttons (Labels mapped to Radio IDs) -->
+            <div class="filter-tabs">
+                <label for="filter-all" class="filter-tab">All Photos</label>
+                <label for="filter-maldives" class="filter-tab">Maldives</label>
+                <label for="filter-dubai" class="filter-tab">Dubai</label>
+                <label for="filter-bali" class="filter-tab">Bali</label>
+                <label for="filter-thailand" class="filter-tab">Thailand</label>
+                <label for="filter-switzerland" class="filter-tab">Switzerland</label>
+                <label for="filter-paris" class="filter-tab">Paris</label>
+                <label for="filter-singapore" class="filter-tab">Singapore</label>
+                <label for="filter-malaysia" class="filter-tab">Malaysia</label>
+            </div>
+
+            <!-- Photos Grid -->
+            <div class="photo-grid">
+                <!-- Maldives 1 -->
+                <a href="#lightbox-mld-1" class="photo-item item-maldives">
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Maldives Overwater Sanctuary">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Overwater Sanctuary</h4>
+                            <p>Maldives</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Maldives 2 -->
+                <a href="#lightbox-mld-2" class="photo-item item-maldives">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80" alt="Maldives Tropical Lagoon">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Tropical Lagoon</h4>
+                            <p>Maldives</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Dubai 1 -->
+                <a href="#lightbox-dxb-1" class="photo-item item-dubai">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai Marina Skyline">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Marina Skyline</h4>
+                            <p>Dubai</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Dubai 2 -->
+                <a href="#lightbox-dxb-2" class="photo-item item-dubai">
+                    <img src="https://images.unsplash.com/photo-1582948626619-a20c3260cc72?auto=format&fit=crop&w=800&q=80" alt="Dubai Desert Safari">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Desert Dunes</h4>
+                            <p>Dubai</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Bali 1 -->
+                <a href="#lightbox-bal-1" class="photo-item item-bali">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali Water Temple">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Ubud Heritage</h4>
+                            <p>Bali</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Bali 2 -->
+                <a href="#lightbox-bal-2" class="photo-item item-bali">
+                    <img src="https://images.unsplash.com/photo-1552608494-18ba48db49d6?auto=format&fit=crop&w=800&q=80" alt="Bali Tegenungan Waterfall">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Rainforest Falls</h4>
+                            <p>Bali</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Thailand 1 -->
+                <a href="#lightbox-tha-1" class="photo-item item-thailand">
+                    <img src="https://images.unsplash.com/photo-1528181304800-2f5353a98ef3?auto=format&fit=crop&w=800&q=80" alt="Thailand Phi Phi Islands">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Phi Phi Islands</h4>
+                            <p>Thailand</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Thailand 2 -->
+                <a href="#lightbox-tha-2" class="photo-item item-thailand">
+                    <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80" alt="Bangkok Grand Palace">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Grand Temple</h4>
+                            <p>Thailand</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Switzerland 1 -->
+                <a href="#lightbox-swz-1" class="photo-item item-switzerland">
+                    <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=80" alt="Swiss Matterhorn Valley">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Matterhorn Valley</h4>
+                            <p>Switzerland</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Switzerland 2 -->
+                <a href="#lightbox-swz-2" class="photo-item item-switzerland">
+                    <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Lake Lucerne Peak">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Lake Lucerne</h4>
+                            <p>Switzerland</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Paris 1 -->
+                <a href="#lightbox-par-1" class="photo-item item-paris">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris Eiffel Tower">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Eiffel Tower</h4>
+                            <p>Paris</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Paris 2 -->
+                <a href="#lightbox-par-2" class="photo-item item-paris">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80" alt="Louvre Museum Pyramid">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Louvre Pyramid</h4>
+                            <p>Paris</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Singapore 1 -->
+                <a href="#lightbox-sin-1" class="photo-item item-singapore">
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80" alt="Singapore Marina Bay">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Marina Bay Sands</h4>
+                            <p>Singapore</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Singapore 2 -->
+                <a href="#lightbox-sin-2" class="photo-item item-singapore">
+                    <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=800&q=80" alt="Gardens by the Bay">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Supertree Grove</h4>
+                            <p>Singapore</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Malaysia 1 -->
+                <a href="#lightbox-mys-1" class="photo-item item-malaysia">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=800&q=80" alt="KL Petronas Twin Towers">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Petronas Towers</h4>
+                            <p>Malaysia</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+
+                <!-- Malaysia 2 -->
+                <a href="#lightbox-mys-2" class="photo-item item-malaysia">
+                    <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80" alt="Langkawi Island Beach">
+                    <div class="photo-overlay">
+                        <div>
+                            <h4>Langkawi Beach</h4>
+                            <p>Malaysia</p>
+                        </div>
+                        <span>🔍</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+      5. TRAVEL CATEGORIES SECTION
     ========================================== -->
     <section class="categories-section">
         <div class="section-header">
             <h2>Travel Categories</h2>
-            <p>Filter destinations by your preferred vacation style to find your matching paradise.</p>
+            <p>Filter destinations by your preferred vacation style to find your matching holiday.</p>
         </div>
 
         <div class="category-grid">
@@ -256,7 +487,7 @@
     </section>
 
     <!-- ==========================================
-      5. KNOW BEFORE YOU GO (Country Details)
+      6. KNOW BEFORE YOU GO (Country Details)
     ========================================== -->
     <section class="country-info-section">
         <div class="section-header">
@@ -386,9 +617,9 @@
     </section>
 
     <!-- ==========================================
-      6. VISA REQUIREMENT SUMMARY
+      7. VISA REQUIREMENT SUMMARY
     ========================================== -->
-    <section class="table-section">
+    <section class="table-section" style="padding-top: 0;">
         <div class="section-header">
             <h2>Visa Requirement Summary</h2>
             <p>A quick summary of visa requirements by country for tourists. Check details well in advance of departure.</p>
@@ -464,10 +695,9 @@
     </section>
 
     <!-- ==========================================
-      7. CONTACT & FOOTER SECTION
+      8. FOOTER SECTION
     ========================================== -->
     <section id="contact" class="contact-wrapper">
-        <!-- Footer Column Areas -->
         <footer class="footer-bottom">
             <div class="footer-brand">
                 <h3>ENIX Travels</h3>
@@ -496,6 +726,217 @@
             <p>Designed with luxury aesthetic and pure CSS micro-interactions.</p>
         </div>
     </section>
+
+    <!-- ==========================================
+      9. LIGHTBOX CONTAINERS (PURE CSS TARGETS)
+    ========================================== -->
+    <!-- Maldives 1 -->
+    <div class="lightbox" id="lightbox-mld-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80" alt="Maldives Sanctuary">
+            <div class="lightbox-title-box">
+                <h3>Overwater Sanctuary</h3>
+                <p>Maldives</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maldives 2 -->
+    <div class="lightbox" id="lightbox-mld-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1200&q=80" alt="Maldives Lagoon">
+            <div class="lightbox-title-box">
+                <h3>Tropical Lagoon</h3>
+                <p>Maldives</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dubai 1 -->
+    <div class="lightbox" id="lightbox-dxb-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80" alt="Dubai Skyline">
+            <div class="lightbox-title-box">
+                <h3>Marina Skyline</h3>
+                <p>Dubai</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dubai 2 -->
+    <div class="lightbox" id="lightbox-dxb-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1582948626619-a20c3260cc72?auto=format&fit=crop&w=1200&q=80" alt="Dubai Safari">
+            <div class="lightbox-title-box">
+                <h3>Desert Dunes</h3>
+                <p>Dubai</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bali 1 -->
+    <div class="lightbox" id="lightbox-bal-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80" alt="Bali Temple">
+            <div class="lightbox-title-box">
+                <h3>Ubud Heritage</h3>
+                <p>Bali</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bali 2 -->
+    <div class="lightbox" id="lightbox-bal-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1552608494-18ba48db49d6?auto=format&fit=crop&w=1200&q=80" alt="Bali Waterfall">
+            <div class="lightbox-title-box">
+                <h3>Rainforest Falls</h3>
+                <p>Bali</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thailand 1 -->
+    <div class="lightbox" id="lightbox-tha-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1528181304800-2f5353a98ef3?auto=format&fit=crop&w=1200&q=80" alt="Thailand Beach">
+            <div class="lightbox-title-box">
+                <h3>Phi Phi Islands</h3>
+                <p>Thailand</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thailand 2 -->
+    <div class="lightbox" id="lightbox-tha-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80" alt="Bangkok Temple">
+            <div class="lightbox-title-box">
+                <h3>Grand Temple</h3>
+                <p>Thailand</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Switzerland 1 -->
+    <div class="lightbox" id="lightbox-swz-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=1200&q=80" alt="Swiss Valley">
+            <div class="lightbox-title-box">
+                <h3>Matterhorn Valley</h3>
+                <p>Switzerland</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Switzerland 2 -->
+    <div class="lightbox" id="lightbox-swz-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80" alt="Lake Lucerne">
+            <div class="lightbox-title-box">
+                <h3>Lake Lucerne</h3>
+                <p>Switzerland</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paris 1 -->
+    <div class="lightbox" id="lightbox-par-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80" alt="Eiffel Tower">
+            <div class="lightbox-title-box">
+                <h3>Eiffel Tower</h3>
+                <p>Paris</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paris 2 -->
+    <div class="lightbox" id="lightbox-par-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=80" alt="Louvre Pyramid">
+            <div class="lightbox-title-box">
+                <h3>Louvre Pyramid</h3>
+                <p>Paris</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Singapore 1 -->
+    <div class="lightbox" id="lightbox-sin-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80" alt="Marina Bay Sands">
+            <div class="lightbox-title-box">
+                <h3>Marina Bay Sands</h3>
+                <p>Singapore</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Singapore 2 -->
+    <div class="lightbox" id="lightbox-sin-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=1200&q=80" alt="Gardens by the Bay">
+            <div class="lightbox-title-box">
+                <h3>Supertree Grove</h3>
+                <p>Singapore</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Malaysia 1 -->
+    <div class="lightbox" id="lightbox-mys-1">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=1200&q=80" alt="Petronas Twin Towers">
+            <div class="lightbox-title-box">
+                <h3>Petronas Towers</h3>
+                <p>Malaysia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Malaysia 2 -->
+    <div class="lightbox" id="lightbox-mys-2">
+        <a href="#gallery" class="lightbox-close-helper"></a>
+        <div class="lightbox-content-box">
+            <a href="#gallery" class="btn-close-lightbox">✕</a>
+            <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=1200&q=80" alt="Langkawi Island Beach">
+            <div class="lightbox-title-box">
+                <h3>Langkawi Beach</h3>
+                <p>Malaysia</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
